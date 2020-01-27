@@ -49,6 +49,7 @@
 		8D352B6223DF1C9000FD01F2 /* GraphQLToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphQLToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D352B6623DF1C9000FD01F2 /* GraphQLToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLToDoUITests.swift; sourceTree = "<group>"; };
 		8D352B6823DF1C9000FD01F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D352B7423DF26AE00FD01F2 /* CarthageInputFileList.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = CarthageInputFileList.xcfilelist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		8D352B3823DF1C9000FD01F2 = {
 			isa = PBXGroup;
 			children = (
+				8D352B7423DF26AE00FD01F2 /* CarthageInputFileList.xcfilelist */,
 				8D352B4323DF1C9000FD01F2 /* GraphQLToDo */,
 				8D352B5A23DF1C9000FD01F2 /* GraphQLToDoTests */,
 				8D352B6523DF1C9000FD01F2 /* GraphQLToDoUITests */,
