@@ -263,6 +263,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D352B6B23DF1C9000FD01F2 /* Build configuration list for PBXNativeTarget "GraphQLToDo" */;
 			buildPhases = (
+				8D352BAF23DF636600FD01F2 /* Apollo */,
 				8D352B3D23DF1C9000FD01F2 /* Sources */,
 				8D352B3E23DF1C9000FD01F2 /* Frameworks */,
 				8D352B3F23DF1C9000FD01F2 /* Resources */,
@@ -403,6 +404,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		8D352BAF23DF636600FD01F2 /* Apollo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/GrapgQLToDo/Networking/*.graphql",
+			);
+			name = Apollo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/GraphQLToDo/Networking/API.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT_PATH=\"${SRCROOT}/Carthage/Checkouts/apollo-ios/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./Networking/Schema/*.graphql --localSchemaFile=\"schema.json\" ./Networking/API.swift\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
