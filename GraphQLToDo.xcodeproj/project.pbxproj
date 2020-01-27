@@ -190,6 +190,11 @@
 		8D352B4323DF1C9000FD01F2 /* GraphQLToDo */ = {
 			isa = PBXGroup;
 			children = (
+				8D352BAB23DF4F4900FD01F2 /* DI */,
+				8D352BA823DF4E2700FD01F2 /* Service */,
+				8D352BA723DF4E1700FD01F2 /* Reactor */,
+				8D352BA623DF4DFC00FD01F2 /* ViewController */,
+				8D352BA523DF494000FD01F2 /* Networking */,
 				8D352B4423DF1C9000FD01F2 /* AppDelegate.swift */,
 				8D352B4623DF1C9000FD01F2 /* SceneDelegate.swift */,
 				8D352B4823DF1C9000FD01F2 /* ViewController.swift */,
@@ -239,6 +244,57 @@
 				8D352B7C23DF438700FD01F2 /* SwinjectAutoregistration.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D352BA523DF494000FD01F2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8D352BAA23DF4E5100FD01F2 /* Schema */,
+				8D352BA923DF4E3C00FD01F2 /* Repository */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8D352BA623DF4DFC00FD01F2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8D352BA723DF4E1700FD01F2 /* Reactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reactor;
+			sourceTree = "<group>";
+		};
+		8D352BA823DF4E2700FD01F2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8D352BA923DF4E3C00FD01F2 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8D352BAA23DF4E5100FD01F2 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		8D352BAB23DF4F4900FD01F2 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
