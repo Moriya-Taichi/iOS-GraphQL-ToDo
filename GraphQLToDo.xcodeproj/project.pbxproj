@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D352B4523DF1C9000FD01F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B4423DF1C9000FD01F2 /* AppDelegate.swift */; };
+		8D352B4723DF1C9000FD01F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B4623DF1C9000FD01F2 /* SceneDelegate.swift */; };
+		8D352B4923DF1C9000FD01F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B4823DF1C9000FD01F2 /* ViewController.swift */; };
+		8D352B4C23DF1C9000FD01F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D352B4A23DF1C9000FD01F2 /* Main.storyboard */; };
+		8D352B4E23DF1C9000FD01F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D352B4D23DF1C9000FD01F2 /* Assets.xcassets */; };
+		8D352B5123DF1C9000FD01F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D352B4F23DF1C9000FD01F2 /* LaunchScreen.storyboard */; };
+		8D352B5C23DF1C9000FD01F2 /* GraphQLToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B5B23DF1C9000FD01F2 /* GraphQLToDoTests.swift */; };
+		8D352B6723DF1C9000FD01F2 /* GraphQLToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B6623DF1C9000FD01F2 /* GraphQLToDoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D352B5823DF1C9000FD01F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D352B3923DF1C9000FD01F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D352B4023DF1C9000FD01F2;
+			remoteInfo = GraphQLToDo;
+		};
+		8D352B6323DF1C9000FD01F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D352B3923DF1C9000FD01F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D352B4023DF1C9000FD01F2;
+			remoteInfo = GraphQLToDo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8D352B4123DF1C9000FD01F2 /* GraphQLToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphQLToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D352B4423DF1C9000FD01F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8D352B4623DF1C9000FD01F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8D352B4823DF1C9000FD01F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D352B4B23DF1C9000FD01F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8D352B4D23DF1C9000FD01F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D352B5023DF1C9000FD01F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D352B5223DF1C9000FD01F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D352B5723DF1C9000FD01F2 /* GraphQLToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphQLToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D352B5B23DF1C9000FD01F2 /* GraphQLToDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLToDoTests.swift; sourceTree = "<group>"; };
+		8D352B5D23DF1C9000FD01F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D352B6223DF1C9000FD01F2 /* GraphQLToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphQLToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D352B6623DF1C9000FD01F2 /* GraphQLToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLToDoUITests.swift; sourceTree = "<group>"; };
+		8D352B6823DF1C9000FD01F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D352B3E23DF1C9000FD01F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D352B5423DF1C9000FD01F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D352B5F23DF1C9000FD01F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D352B3823DF1C9000FD01F2 = {
+			isa = PBXGroup;
+			children = (
+				8D352B4323DF1C9000FD01F2 /* GraphQLToDo */,
+				8D352B5A23DF1C9000FD01F2 /* GraphQLToDoTests */,
+				8D352B6523DF1C9000FD01F2 /* GraphQLToDoUITests */,
+				8D352B4223DF1C9000FD01F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8D352B4223DF1C9000FD01F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D352B4123DF1C9000FD01F2 /* GraphQLToDo.app */,
+				8D352B5723DF1C9000FD01F2 /* GraphQLToDoTests.xctest */,
+				8D352B6223DF1C9000FD01F2 /* GraphQLToDoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D352B4323DF1C9000FD01F2 /* GraphQLToDo */ = {
+			isa = PBXGroup;
+			children = (
+				8D352B4423DF1C9000FD01F2 /* AppDelegate.swift */,
+				8D352B4623DF1C9000FD01F2 /* SceneDelegate.swift */,
+				8D352B4823DF1C9000FD01F2 /* ViewController.swift */,
+				8D352B4A23DF1C9000FD01F2 /* Main.storyboard */,
+				8D352B4D23DF1C9000FD01F2 /* Assets.xcassets */,
+				8D352B4F23DF1C9000FD01F2 /* LaunchScreen.storyboard */,
+				8D352B5223DF1C9000FD01F2 /* Info.plist */,
+			);
+			path = GraphQLToDo;
+			sourceTree = "<group>";
+		};
+		8D352B5A23DF1C9000FD01F2 /* GraphQLToDoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D352B5B23DF1C9000FD01F2 /* GraphQLToDoTests.swift */,
+				8D352B5D23DF1C9000FD01F2 /* Info.plist */,
+			);
+			path = GraphQLToDoTests;
+			sourceTree = "<group>";
+		};
+		8D352B6523DF1C9000FD01F2 /* GraphQLToDoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8D352B6623DF1C9000FD01F2 /* GraphQLToDoUITests.swift */,
+				8D352B6823DF1C9000FD01F2 /* Info.plist */,
+			);
+			path = GraphQLToDoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D352B4023DF1C9000FD01F2 /* GraphQLToDo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D352B6B23DF1C9000FD01F2 /* Build configuration list for PBXNativeTarget "GraphQLToDo" */;
+			buildPhases = (
+				8D352B3D23DF1C9000FD01F2 /* Sources */,
+				8D352B3E23DF1C9000FD01F2 /* Frameworks */,
+				8D352B3F23DF1C9000FD01F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GraphQLToDo;
+			productName = GraphQLToDo;
+			productReference = 8D352B4123DF1C9000FD01F2 /* GraphQLToDo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8D352B5623DF1C9000FD01F2 /* GraphQLToDoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D352B6E23DF1C9000FD01F2 /* Build configuration list for PBXNativeTarget "GraphQLToDoTests" */;
+			buildPhases = (
+				8D352B5323DF1C9000FD01F2 /* Sources */,
+				8D352B5423DF1C9000FD01F2 /* Frameworks */,
+				8D352B5523DF1C9000FD01F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D352B5923DF1C9000FD01F2 /* PBXTargetDependency */,
+			);
+			name = GraphQLToDoTests;
+			productName = GraphQLToDoTests;
+			productReference = 8D352B5723DF1C9000FD01F2 /* GraphQLToDoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8D352B6123DF1C9000FD01F2 /* GraphQLToDoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D352B7123DF1C9000FD01F2 /* Build configuration list for PBXNativeTarget "GraphQLToDoUITests" */;
+			buildPhases = (
+				8D352B5E23DF1C9000FD01F2 /* Sources */,
+				8D352B5F23DF1C9000FD01F2 /* Frameworks */,
+				8D352B6023DF1C9000FD01F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D352B6423DF1C9000FD01F2 /* PBXTargetDependency */,
+			);
+			name = GraphQLToDoUITests;
+			productName = GraphQLToDoUITests;
+			productReference = 8D352B6223DF1C9000FD01F2 /* GraphQLToDoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D352B3923DF1C9000FD01F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = Mori;
+				TargetAttributes = {
+					8D352B4023DF1C9000FD01F2 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					8D352B5623DF1C9000FD01F2 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 8D352B4023DF1C9000FD01F2;
+					};
+					8D352B6123DF1C9000FD01F2 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 8D352B4023DF1C9000FD01F2;
+					};
+				};
+			};
+			buildConfigurationList = 8D352B3C23DF1C9000FD01F2 /* Build configuration list for PBXProject "GraphQLToDo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8D352B3823DF1C9000FD01F2;
+			productRefGroup = 8D352B4223DF1C9000FD01F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D352B4023DF1C9000FD01F2 /* GraphQLToDo */,
+				8D352B5623DF1C9000FD01F2 /* GraphQLToDoTests */,
+				8D352B6123DF1C9000FD01F2 /* GraphQLToDoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D352B3F23DF1C9000FD01F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D352B5123DF1C9000FD01F2 /* LaunchScreen.storyboard in Resources */,
+				8D352B4E23DF1C9000FD01F2 /* Assets.xcassets in Resources */,
+				8D352B4C23DF1C9000FD01F2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D352B5523DF1C9000FD01F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D352B6023DF1C9000FD01F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D352B3D23DF1C9000FD01F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D352B4923DF1C9000FD01F2 /* ViewController.swift in Sources */,
+				8D352B4523DF1C9000FD01F2 /* AppDelegate.swift in Sources */,
+				8D352B4723DF1C9000FD01F2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D352B5323DF1C9000FD01F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D352B5C23DF1C9000FD01F2 /* GraphQLToDoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D352B5E23DF1C9000FD01F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D352B6723DF1C9000FD01F2 /* GraphQLToDoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D352B5923DF1C9000FD01F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D352B4023DF1C9000FD01F2 /* GraphQLToDo */;
+			targetProxy = 8D352B5823DF1C9000FD01F2 /* PBXContainerItemProxy */;
+		};
+		8D352B6423DF1C9000FD01F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D352B4023DF1C9000FD01F2 /* GraphQLToDo */;
+			targetProxy = 8D352B6323DF1C9000FD01F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8D352B4A23DF1C9000FD01F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D352B4B23DF1C9000FD01F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8D352B4F23DF1C9000FD01F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D352B5023DF1C9000FD01F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8D352B6923DF1C9000FD01F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8D352B6A23DF1C9000FD01F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D352B6C23DF1C9000FD01F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8V9298F7HL;
+				INFOPLIST_FILE = GraphQLToDo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mori.GraphQLToDo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D352B6D23DF1C9000FD01F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8V9298F7HL;
+				INFOPLIST_FILE = GraphQLToDo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mori.GraphQLToDo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8D352B6F23DF1C9000FD01F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8V9298F7HL;
+				INFOPLIST_FILE = GraphQLToDoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mori.GraphQLToDoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GraphQLToDo.app/GraphQLToDo";
+			};
+			name = Debug;
+		};
+		8D352B7023DF1C9000FD01F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8V9298F7HL;
+				INFOPLIST_FILE = GraphQLToDoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mori.GraphQLToDoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GraphQLToDo.app/GraphQLToDo";
+			};
+			name = Release;
+		};
+		8D352B7223DF1C9000FD01F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8V9298F7HL;
+				INFOPLIST_FILE = GraphQLToDoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mori.GraphQLToDoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GraphQLToDo;
+			};
+			name = Debug;
+		};
+		8D352B7323DF1C9000FD01F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8V9298F7HL;
+				INFOPLIST_FILE = GraphQLToDoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mori.GraphQLToDoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GraphQLToDo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D352B3C23DF1C9000FD01F2 /* Build configuration list for PBXProject "GraphQLToDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D352B6923DF1C9000FD01F2 /* Debug */,
+				8D352B6A23DF1C9000FD01F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D352B6B23DF1C9000FD01F2 /* Build configuration list for PBXNativeTarget "GraphQLToDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D352B6C23DF1C9000FD01F2 /* Debug */,
+				8D352B6D23DF1C9000FD01F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D352B6E23DF1C9000FD01F2 /* Build configuration list for PBXNativeTarget "GraphQLToDoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D352B6F23DF1C9000FD01F2 /* Debug */,
+				8D352B7023DF1C9000FD01F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D352B7123DF1C9000FD01F2 /* Build configuration list for PBXNativeTarget "GraphQLToDoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D352B7223DF1C9000FD01F2 /* Debug */,
+				8D352B7323DF1C9000FD01F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D352B3923DF1C9000FD01F2 /* Project object */;
+}
