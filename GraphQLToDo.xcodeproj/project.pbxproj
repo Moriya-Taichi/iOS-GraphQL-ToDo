@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,36 @@
 		8D352B5123DF1C9000FD01F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D352B4F23DF1C9000FD01F2 /* LaunchScreen.storyboard */; };
 		8D352B5C23DF1C9000FD01F2 /* GraphQLToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B5B23DF1C9000FD01F2 /* GraphQLToDoTests.swift */; };
 		8D352B6723DF1C9000FD01F2 /* GraphQLToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B6623DF1C9000FD01F2 /* GraphQLToDoUITests.swift */; };
+		8D352B8523DF438700FD01F2 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7623DF438700FD01F2 /* RxDataSources.framework */; };
+		8D352B8623DF438700FD01F2 /* RxDataSources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7623DF438700FD01F2 /* RxDataSources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B8723DF438700FD01F2 /* ApolloWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7723DF438700FD01F2 /* ApolloWebSocket.framework */; };
+		8D352B8823DF438700FD01F2 /* ApolloWebSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7723DF438700FD01F2 /* ApolloWebSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B8923DF438700FD01F2 /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7823DF438700FD01F2 /* Apollo.framework */; };
+		8D352B8A23DF438700FD01F2 /* Apollo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7823DF438700FD01F2 /* Apollo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B8B23DF438700FD01F2 /* SDWebImageMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7923DF438700FD01F2 /* SDWebImageMapKit.framework */; };
+		8D352B8C23DF438700FD01F2 /* SDWebImageMapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7923DF438700FD01F2 /* SDWebImageMapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B8D23DF438700FD01F2 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7A23DF438700FD01F2 /* SDWebImage.framework */; };
+		8D352B8E23DF438700FD01F2 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7A23DF438700FD01F2 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B8F23DF438700FD01F2 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7B23DF438700FD01F2 /* Swinject.framework */; };
+		8D352B9023DF438700FD01F2 /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7B23DF438700FD01F2 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B9123DF438700FD01F2 /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7C23DF438700FD01F2 /* SwinjectAutoregistration.framework */; };
+		8D352B9223DF438700FD01F2 /* SwinjectAutoregistration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7C23DF438700FD01F2 /* SwinjectAutoregistration.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B9323DF438700FD01F2 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7D23DF438700FD01F2 /* RxRelay.framework */; };
+		8D352B9423DF438700FD01F2 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7D23DF438700FD01F2 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B9523DF438700FD01F2 /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7E23DF438700FD01F2 /* RxOptional.framework */; };
+		8D352B9623DF438700FD01F2 /* RxOptional.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7E23DF438700FD01F2 /* RxOptional.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B9723DF438700FD01F2 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7F23DF438700FD01F2 /* ReactorKit.framework */; };
+		8D352B9823DF438700FD01F2 /* ReactorKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7F23DF438700FD01F2 /* ReactorKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B9923DF438700FD01F2 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8023DF438700FD01F2 /* ReactorKitRuntime.framework */; };
+		8D352B9A23DF438700FD01F2 /* ReactorKitRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8023DF438700FD01F2 /* ReactorKitRuntime.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B9B23DF438700FD01F2 /* ApolloSQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8123DF438700FD01F2 /* ApolloSQLite.framework */; };
+		8D352B9C23DF438700FD01F2 /* ApolloSQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8123DF438700FD01F2 /* ApolloSQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B9D23DF438700FD01F2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8223DF438700FD01F2 /* RxCocoa.framework */; };
+		8D352B9E23DF438700FD01F2 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8223DF438700FD01F2 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352B9F23DF438700FD01F2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8323DF438700FD01F2 /* RxSwift.framework */; };
+		8D352BA023DF438700FD01F2 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8323DF438700FD01F2 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D352BA123DF438700FD01F2 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8423DF438700FD01F2 /* Differentiator.framework */; };
+		8D352BA223DF438700FD01F2 /* Differentiator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8423DF438700FD01F2 /* Differentiator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +64,34 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8D352BA323DF438700FD01F2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8D352B8E23DF438700FD01F2 /* SDWebImage.framework in Embed Frameworks */,
+				8D352B9623DF438700FD01F2 /* RxOptional.framework in Embed Frameworks */,
+				8D352BA023DF438700FD01F2 /* RxSwift.framework in Embed Frameworks */,
+				8D352B9E23DF438700FD01F2 /* RxCocoa.framework in Embed Frameworks */,
+				8D352B8C23DF438700FD01F2 /* SDWebImageMapKit.framework in Embed Frameworks */,
+				8D352B8A23DF438700FD01F2 /* Apollo.framework in Embed Frameworks */,
+				8D352BA223DF438700FD01F2 /* Differentiator.framework in Embed Frameworks */,
+				8D352B9023DF438700FD01F2 /* Swinject.framework in Embed Frameworks */,
+				8D352B9423DF438700FD01F2 /* RxRelay.framework in Embed Frameworks */,
+				8D352B9823DF438700FD01F2 /* ReactorKit.framework in Embed Frameworks */,
+				8D352B9A23DF438700FD01F2 /* ReactorKitRuntime.framework in Embed Frameworks */,
+				8D352B8623DF438700FD01F2 /* RxDataSources.framework in Embed Frameworks */,
+				8D352B9223DF438700FD01F2 /* SwinjectAutoregistration.framework in Embed Frameworks */,
+				8D352B8823DF438700FD01F2 /* ApolloWebSocket.framework in Embed Frameworks */,
+				8D352B9C23DF438700FD01F2 /* ApolloSQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8D352B4123DF1C9000FD01F2 /* GraphQLToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphQLToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D352B4423DF1C9000FD01F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +108,21 @@
 		8D352B6623DF1C9000FD01F2 /* GraphQLToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLToDoUITests.swift; sourceTree = "<group>"; };
 		8D352B6823DF1C9000FD01F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D352B7423DF26AE00FD01F2 /* CarthageInputFileList.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = CarthageInputFileList.xcfilelist; sourceTree = "<group>"; };
+		8D352B7623DF438700FD01F2 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
+		8D352B7723DF438700FD01F2 /* ApolloWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApolloWebSocket.framework; path = Carthage/Build/iOS/ApolloWebSocket.framework; sourceTree = "<group>"; };
+		8D352B7823DF438700FD01F2 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
+		8D352B7923DF438700FD01F2 /* SDWebImageMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImageMapKit.framework; path = Carthage/Build/iOS/SDWebImageMapKit.framework; sourceTree = "<group>"; };
+		8D352B7A23DF438700FD01F2 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		8D352B7B23DF438700FD01F2 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		8D352B7C23DF438700FD01F2 /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
+		8D352B7D23DF438700FD01F2 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		8D352B7E23DF438700FD01F2 /* RxOptional.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxOptional.framework; path = Carthage/Build/iOS/RxOptional.framework; sourceTree = "<group>"; };
+		8D352B7F23DF438700FD01F2 /* ReactorKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactorKit.framework; path = Carthage/Build/iOS/ReactorKit.framework; sourceTree = "<group>"; };
+		8D352B8023DF438700FD01F2 /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactorKitRuntime.framework; path = Carthage/Build/iOS/ReactorKitRuntime.framework; sourceTree = "<group>"; };
+		8D352B8123DF438700FD01F2 /* ApolloSQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApolloSQLite.framework; path = Carthage/Build/iOS/ApolloSQLite.framework; sourceTree = "<group>"; };
+		8D352B8223DF438700FD01F2 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		8D352B8323DF438700FD01F2 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		8D352B8423DF438700FD01F2 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +130,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D352B8D23DF438700FD01F2 /* SDWebImage.framework in Frameworks */,
+				8D352B9523DF438700FD01F2 /* RxOptional.framework in Frameworks */,
+				8D352B9F23DF438700FD01F2 /* RxSwift.framework in Frameworks */,
+				8D352B9D23DF438700FD01F2 /* RxCocoa.framework in Frameworks */,
+				8D352B8B23DF438700FD01F2 /* SDWebImageMapKit.framework in Frameworks */,
+				8D352B8923DF438700FD01F2 /* Apollo.framework in Frameworks */,
+				8D352BA123DF438700FD01F2 /* Differentiator.framework in Frameworks */,
+				8D352B8F23DF438700FD01F2 /* Swinject.framework in Frameworks */,
+				8D352B9323DF438700FD01F2 /* RxRelay.framework in Frameworks */,
+				8D352B9723DF438700FD01F2 /* ReactorKit.framework in Frameworks */,
+				8D352B9923DF438700FD01F2 /* ReactorKitRuntime.framework in Frameworks */,
+				8D352B8523DF438700FD01F2 /* RxDataSources.framework in Frameworks */,
+				8D352B9123DF438700FD01F2 /* SwinjectAutoregistration.framework in Frameworks */,
+				8D352B8723DF438700FD01F2 /* ApolloWebSocket.framework in Frameworks */,
+				8D352B9B23DF438700FD01F2 /* ApolloSQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +173,7 @@
 				8D352B5A23DF1C9000FD01F2 /* GraphQLToDoTests */,
 				8D352B6523DF1C9000FD01F2 /* GraphQLToDoUITests */,
 				8D352B4223DF1C9000FD01F2 /* Products */,
+				8D352B7523DF438600FD01F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +219,28 @@
 			path = GraphQLToDoUITests;
 			sourceTree = "<group>";
 		};
+		8D352B7523DF438600FD01F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D352B7823DF438700FD01F2 /* Apollo.framework */,
+				8D352B8123DF438700FD01F2 /* ApolloSQLite.framework */,
+				8D352B7723DF438700FD01F2 /* ApolloWebSocket.framework */,
+				8D352B8423DF438700FD01F2 /* Differentiator.framework */,
+				8D352B7F23DF438700FD01F2 /* ReactorKit.framework */,
+				8D352B8023DF438700FD01F2 /* ReactorKitRuntime.framework */,
+				8D352B8223DF438700FD01F2 /* RxCocoa.framework */,
+				8D352B7623DF438700FD01F2 /* RxDataSources.framework */,
+				8D352B7E23DF438700FD01F2 /* RxOptional.framework */,
+				8D352B7D23DF438700FD01F2 /* RxRelay.framework */,
+				8D352B8323DF438700FD01F2 /* RxSwift.framework */,
+				8D352B7A23DF438700FD01F2 /* SDWebImage.framework */,
+				8D352B7923DF438700FD01F2 /* SDWebImageMapKit.framework */,
+				8D352B7B23DF438700FD01F2 /* Swinject.framework */,
+				8D352B7C23DF438700FD01F2 /* SwinjectAutoregistration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +251,8 @@
 				8D352B3D23DF1C9000FD01F2 /* Sources */,
 				8D352B3E23DF1C9000FD01F2 /* Frameworks */,
 				8D352B3F23DF1C9000FD01F2 /* Resources */,
+				8D352BA323DF438700FD01F2 /* Embed Frameworks */,
+				8D352BA423DF439900FD01F2 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -255,6 +368,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D352BA423DF439900FD01F2 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/CarthageInputFileList.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D352B3D23DF1C9000FD01F2 /* Sources */ = {
@@ -438,6 +573,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8V9298F7HL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GraphQLToDo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +595,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8V9298F7HL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GraphQLToDo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
