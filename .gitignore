@@ -35,3 +35,4 @@ playground.xcworkspace
 
 # auto generatede
 node_modules/*
+API.swift
