@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol ApiType {
+    var baseURL: URL { get }
+    var header: [String: String] { get `}
+}
