@@ -30,6 +30,13 @@
 		8D352B9D23DF438700FD01F2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8223DF438700FD01F2 /* RxCocoa.framework */; };
 		8D352B9F23DF438700FD01F2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8323DF438700FD01F2 /* RxSwift.framework */; };
 		8D352BA123DF438700FD01F2 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8423DF438700FD01F2 /* Differentiator.framework */; };
+		8D352BB123E1FBA000FD01F2 /* Task.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8D352BB023E1FBA000FD01F2 /* Task.graphql */; };
+		8D352BB323E1FF6400FD01F2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352BB223E1FF6400FD01F2 /* API.swift */; };
+		8D352BB623E200E000FD01F2 /* Apollo+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352BB523E200E000FD01F2 /* Apollo+Rx.swift */; };
+		8D352BB823E2164D00FD01F2 /* GraphQLApiType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352BB723E2164D00FD01F2 /* GraphQLApiType.swift */; };
+		8D352BBA23E2172B00FD01F2 /* GraphQLProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352BB923E2172B00FD01F2 /* GraphQLProviderType.swift */; };
+		8D352BBC23E2174B00FD01F2 /* GraphQLRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352BBB23E2174B00FD01F2 /* GraphQLRepositoryType.swift */; };
+		8D352BBE23E2B38A00FD01F2 /* ApiType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352BBD23E2B38A00FD01F2 /* ApiType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +88,13 @@
 		8D352B8323DF438700FD01F2 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		8D352B8423DF438700FD01F2 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
 		8D352BAE23DF523E00FD01F2 /* CarthageOutputFileList.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = CarthageOutputFileList.xcfilelist; sourceTree = "<group>"; };
+		8D352BB023E1FBA000FD01F2 /* Task.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Task.graphql; sourceTree = "<group>"; };
+		8D352BB223E1FF6400FD01F2 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8D352BB523E200E000FD01F2 /* Apollo+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Apollo+Rx.swift"; sourceTree = "<group>"; };
+		8D352BB723E2164D00FD01F2 /* GraphQLApiType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLApiType.swift; sourceTree = "<group>"; };
+		8D352BB923E2172B00FD01F2 /* GraphQLProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLProviderType.swift; sourceTree = "<group>"; };
+		8D352BBB23E2174B00FD01F2 /* GraphQLRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLRepositoryType.swift; sourceTree = "<group>"; };
+		8D352BBD23E2B38A00FD01F2 /* ApiType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +163,7 @@
 		8D352B4323DF1C9000FD01F2 /* GraphQLToDo */ = {
 			isa = PBXGroup;
 			children = (
+				8D352BB423E1FF7200FD01F2 /* Extension */,
 				8D352BAB23DF4F4900FD01F2 /* DI */,
 				8D352BA823DF4E2700FD01F2 /* Service */,
 				8D352BA723DF4E1700FD01F2 /* Reactor */,
@@ -208,6 +223,7 @@
 		8D352BA523DF494000FD01F2 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				8D352BB223E1FF6400FD01F2 /* API.swift */,
 				8D352BAA23DF4E5100FD01F2 /* Schema */,
 				8D352BA923DF4E3C00FD01F2 /* Repository */,
 			);
@@ -238,6 +254,10 @@
 		8D352BA923DF4E3C00FD01F2 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				8D352BBD23E2B38A00FD01F2 /* ApiType.swift */,
+				8D352BB723E2164D00FD01F2 /* GraphQLApiType.swift */,
+				8D352BB923E2172B00FD01F2 /* GraphQLProviderType.swift */,
+				8D352BBB23E2174B00FD01F2 /* GraphQLRepositoryType.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -245,6 +265,7 @@
 		8D352BAA23DF4E5100FD01F2 /* Schema */ = {
 			isa = PBXGroup;
 			children = (
+				8D352BB023E1FBA000FD01F2 /* Task.graphql */,
 			);
 			path = Schema;
 			sourceTree = "<group>";
@@ -254,6 +275,14 @@
 			children = (
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		8D352BB423E1FF7200FD01F2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8D352BB523E200E000FD01F2 /* Apollo+Rx.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D352BB123E1FBA000FD01F2 /* Task.graphql in Resources */,
 				8D352B5123DF1C9000FD01F2 /* LaunchScreen.storyboard in Resources */,
 				8D352B4E23DF1C9000FD01F2 /* Assets.xcassets in Resources */,
 				8D352B4C23DF1C9000FD01F2 /* Main.storyboard in Resources */,
@@ -423,7 +453,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT_PATH=\"${SRCROOT}/Carthage/Checkouts/apollo-ios/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./Networking/Schema/*.graphql --localSchemaFile=\"schema.json\" ./Networking/API.swift\n";
+			shellScript = "SCRIPT_PATH=\"${SRCROOT}/Carthage/Checkouts/apollo-ios/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./Networking/Schema/*.graphql --localSchemaFile=\"./schema.json\" ./Networking/API.swift\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -432,9 +462,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D352BB823E2164D00FD01F2 /* GraphQLApiType.swift in Sources */,
+				8D352BB623E200E000FD01F2 /* Apollo+Rx.swift in Sources */,
 				8D352B4923DF1C9000FD01F2 /* ViewController.swift in Sources */,
 				8D352B4523DF1C9000FD01F2 /* AppDelegate.swift in Sources */,
+				8D352BB323E1FF6400FD01F2 /* API.swift in Sources */,
+				8D352BBA23E2172B00FD01F2 /* GraphQLProviderType.swift in Sources */,
+				8D352BBE23E2B38A00FD01F2 /* ApiType.swift in Sources */,
 				8D352B4723DF1C9000FD01F2 /* SceneDelegate.swift in Sources */,
+				8D352BBC23E2174B00FD01F2 /* GraphQLRepositoryType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
