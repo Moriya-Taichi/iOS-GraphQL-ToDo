@@ -28,7 +28,5 @@ final class GraphQLApiProvider: GraphQLApiType {
 
     var rx: ReactiveGQLApiType { return ReactiveExtensionApolloClient(self) }
 
-    init() {
-
-    }
+    init() { }
 }
