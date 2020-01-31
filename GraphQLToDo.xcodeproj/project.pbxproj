@@ -38,6 +38,9 @@
 		8D352BBC23E2174B00FD01F2 /* GraphQLRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352BBB23E2174B00FD01F2 /* GraphQLRepositoryType.swift */; };
 		8D352BBE23E2B38A00FD01F2 /* ApiType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352BBD23E2B38A00FD01F2 /* ApiType.swift */; };
 		8D41E90623E497D200686C59 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E90523E497D200686C59 /* TaskRepository.swift */; };
+		8D41E90823E4A05300686C59 /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E90723E4A05300686C59 /* TaskService.swift */; };
+		8D41E90B23E4A17700686C59 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E90A23E4A17700686C59 /* Pagination.swift */; };
+		8D41E90F23E4B96800686C59 /* TaskFields+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E90E23E4B96800686C59 /* TaskFields+Equatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		8D352BBB23E2174B00FD01F2 /* GraphQLRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLRepositoryType.swift; sourceTree = "<group>"; };
 		8D352BBD23E2B38A00FD01F2 /* ApiType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiType.swift; sourceTree = "<group>"; };
 		8D41E90523E497D200686C59 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
+		8D41E90723E4A05300686C59 /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
+		8D41E90A23E4A17700686C59 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		8D41E90E23E4B96800686C59 /* TaskFields+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskFields+Equatable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,7 @@
 		8D352B4323DF1C9000FD01F2 /* GraphQLToDo */ = {
 			isa = PBXGroup;
 			children = (
+				8D41E90923E4A15C00686C59 /* Entities */,
 				8D352BB423E1FF7200FD01F2 /* Extension */,
 				8D352BAB23DF4F4900FD01F2 /* DI */,
 				8D352BA823DF4E2700FD01F2 /* Service */,
@@ -249,6 +256,7 @@
 		8D352BA823DF4E2700FD01F2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8D41E90723E4A05300686C59 /* TaskService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -284,8 +292,17 @@
 			isa = PBXGroup;
 			children = (
 				8D352BB523E200E000FD01F2 /* Apollo+Rx.swift */,
+				8D41E90E23E4B96800686C59 /* TaskFields+Equatable.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8D41E90923E4A15C00686C59 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8D41E90A23E4A17700686C59 /* Pagination.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D41E90823E4A05300686C59 /* TaskService.swift in Sources */,
 				8D352BB823E2164D00FD01F2 /* GraphQLApiType.swift in Sources */,
 				8D352BB623E200E000FD01F2 /* Apollo+Rx.swift in Sources */,
 				8D352B4923DF1C9000FD01F2 /* ViewController.swift in Sources */,
@@ -473,6 +491,8 @@
 				8D352BB323E1FF6400FD01F2 /* API.swift in Sources */,
 				8D352BBA23E2172B00FD01F2 /* GraphQLProviderType.swift in Sources */,
 				8D352BBE23E2B38A00FD01F2 /* ApiType.swift in Sources */,
+				8D41E90F23E4B96800686C59 /* TaskFields+Equatable.swift in Sources */,
+				8D41E90B23E4A17700686C59 /* Pagination.swift in Sources */,
 				8D352B4723DF1C9000FD01F2 /* SceneDelegate.swift in Sources */,
 				8D352BBC23E2174B00FD01F2 /* GraphQLRepositoryType.swift in Sources */,
 			);
