@@ -11,6 +11,9 @@ import RxSwift
 
 protocol TaskRepositoryType: GraphQLRepositoryType {
     func fetchTasks(input: TasksInput, orderBy: TaskOrderFields, page: PaginationInput) -> Single<TasksQuery.Data>
+
+    func createTask(input: CreateTaskInput) -> Single<CreateTaskMutation.Data>
+    func updateTask(input: UpdateTaskInput) -> Single<UpdateTaskMutation.Data>
 }
 
 final class TaskRepository: TaskRepositoryType {
@@ -32,5 +35,15 @@ final class TaskRepository: TaskRepositoryType {
                                                        page: page),
                                      cachePolicy: .returnCacheDataElseFetch,
                                      queue: .global())
+    }
+
+    func createTask(input: CreateTaskInput) -> Single<CreateTaskMutation.Data> {
+        return provider.rx.perform(mutation: CreateTaskMutation(input: input),
+                                   queue: .global())
+    }
+
+    func updateTask(input: UpdateTaskInput) -> Single<UpdateTaskMutation.Data> {
+        return provider.rx.perform(mutation: UpdateTaskMutation(input: input),
+                                   queue: .global())
     }
 }
