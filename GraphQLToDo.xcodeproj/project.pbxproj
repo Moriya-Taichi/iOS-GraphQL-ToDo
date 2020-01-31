@@ -37,6 +37,7 @@
 		8D352BBA23E2172B00FD01F2 /* GraphQLProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352BB923E2172B00FD01F2 /* GraphQLProviderType.swift */; };
 		8D352BBC23E2174B00FD01F2 /* GraphQLRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352BBB23E2174B00FD01F2 /* GraphQLRepositoryType.swift */; };
 		8D352BBE23E2B38A00FD01F2 /* ApiType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352BBD23E2B38A00FD01F2 /* ApiType.swift */; };
+		8D41E90623E497D200686C59 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E90523E497D200686C59 /* TaskRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		8D352BB923E2172B00FD01F2 /* GraphQLProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLProviderType.swift; sourceTree = "<group>"; };
 		8D352BBB23E2174B00FD01F2 /* GraphQLRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLRepositoryType.swift; sourceTree = "<group>"; };
 		8D352BBD23E2B38A00FD01F2 /* ApiType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiType.swift; sourceTree = "<group>"; };
+		8D41E90523E497D200686C59 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 				8D352BB723E2164D00FD01F2 /* GraphQLApiType.swift */,
 				8D352BB923E2172B00FD01F2 /* GraphQLProviderType.swift */,
 				8D352BBB23E2174B00FD01F2 /* GraphQLRepositoryType.swift */,
+				8D41E90523E497D200686C59 /* TaskRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				8D352BB623E200E000FD01F2 /* Apollo+Rx.swift in Sources */,
 				8D352B4923DF1C9000FD01F2 /* ViewController.swift in Sources */,
 				8D352B4523DF1C9000FD01F2 /* AppDelegate.swift in Sources */,
+				8D41E90623E497D200686C59 /* TaskRepository.swift in Sources */,
 				8D352BB323E1FF6400FD01F2 /* API.swift in Sources */,
 				8D352BBA23E2172B00FD01F2 /* GraphQLProviderType.swift in Sources */,
 				8D352BBE23E2B38A00FD01F2 /* ApiType.swift in Sources */,
