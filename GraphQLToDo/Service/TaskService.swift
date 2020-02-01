@@ -45,4 +45,22 @@ final class TaskService: TaskServiceType {
                 )
         }
     }
+
+    func createTask(title: String,
+                    notes: String? = nil,
+                    completed: Bool? = nil,
+                    due: String? = nil)
+        -> Observable<TaskFields>
+    {
+        return repository.createTask(input: CreateTaskInput(
+            title: title,
+            notes: notes,
+            completed: completed,
+            due: due))
+            .asObservable()
+            .map { response in
+                return response.createTask.fragments.taskFields
+        }
+
+    }
 }
