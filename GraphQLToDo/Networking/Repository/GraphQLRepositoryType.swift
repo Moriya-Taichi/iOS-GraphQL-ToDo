@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+protocol GraphQLRepositoryType {
+
+    var provider: GraphQLApiType { get }
+
+    init(provider: GraphQLApiType)
+}
