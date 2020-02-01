@@ -18,7 +18,7 @@ protocol TaskRepositoryType: GraphQLRepositoryType {
 
 final class TaskRepository: TaskRepositoryType {
 
-    var provider: GraphQLApiType
+    let provider: GraphQLApiType
 
     init(provider: GraphQLApiType) {
         self.provider = provider
