@@ -11,6 +11,27 @@ import RxSwift
 
 protocol TaskServiceType {
 
+    func fetchTasks(
+        completed: Bool?,
+        order: TaskOrderFields,
+        endSursor: String,
+        hasNext: Bool
+    )
+        -> Observable<Pagination<TaskFields>>
+
+    func createTask(title: String,
+                    notes: String?,
+                    completed: Bool?,
+                    due: String?)
+        -> Observable<TaskFields>
+
+    func updateTask(
+        taskIdentifier: String,
+        title: String?,
+        notes: String?,
+        completed: Bool?,
+        due: String?)
+        -> Observable<TaskFields>
 }
 
 final class TaskService: TaskServiceType {
@@ -62,5 +83,25 @@ final class TaskService: TaskServiceType {
                 return response.createTask.fragments.taskFields
         }
 
+    }
+
+    func updateTask(
+        taskIdentifier: String,
+        title: String? = nil,
+        notes: String? = nil,
+        completed: Bool? = nil,
+        due: String? = nil)
+        -> Observable<TaskFields>
+    {
+        return repository.updateTask(input: UpdateTaskInput(
+            taskId: taskIdentifier,
+            title: title,
+            notes: notes,
+            completed: completed,
+            due: due))
+            .asObservable()
+            .map { response in
+                return response.updateTask.fragments.taskFields
+        }
     }
 }
