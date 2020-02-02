@@ -6,4 +6,21 @@
 //  Copyright © 2020 Mori. All rights reserved.
 //
 
-import Foundation
+import Swinject
+import SwinjectAutoregistration
+
+final class AppAssembly: Assembly {
+    func assemble(container: Container) {
+        container
+            .autoregister(GraphQLApiType.self, initializer: GraphQLApiProvider.init)
+            .inObjectScope(.container)
+
+        container
+            .autoregister(TaskRepositoryType.self, initializer: TaskRepository.init)
+            .inObjectScope(.container)
+
+        container
+            .autoregister(TaskServiceType.self, initializer: TaskService.init)
+            .inObjectScope(.container)
+    }
+}
