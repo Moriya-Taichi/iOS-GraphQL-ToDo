@@ -16,6 +16,21 @@ final class CreateTaskViewController: UIViewController, StoryboardInstantiate {
 
     var disposeBag = DisposeBag()
 
+    @IBOutlet private weak var closeButton: UIButton!
+    @IBOutlet private weak var backgroundCloseButton: UIButton!
+    @IBOutlet private weak var createTaskButton: UIButton!
+
+    @IBOutlet private weak var titleTextField: UITextField!
+    @IBOutlet private weak var dueTextView: UITextView!
+    @IBOutlet private weak var completedButton: UIButton!
+    @IBOutlet private weak var noteTextView: UITextView!
+
+    @IBOutlet private weak var contentView: UIView! {
+        didSet {
+            contentView.layer.cornerRadius = 15
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
