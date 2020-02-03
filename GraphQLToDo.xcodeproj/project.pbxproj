@@ -52,6 +52,10 @@
 		8D41E92223E7375E00686C59 /* TasksViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E92123E7375E00686C59 /* TasksViewReactor.swift */; };
 		8D41E92823E738DA00686C59 /* CreateTaskViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E92723E738DA00686C59 /* CreateTaskViewReactor.swift */; };
 		8D41E92A23E73DC900686C59 /* UIViewController+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E92923E73DC900686C59 /* UIViewController+instantiate.swift */; };
+		8D41E92E23E8969F00686C59 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D41E92D23E8969F00686C59 /* TaskCell.xib */; };
+		8D41E93023E896AF00686C59 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E92F23E896AF00686C59 /* TaskCell.swift */; };
+		8D41E93223E8971B00686C59 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93123E8971B00686C59 /* SectionModel.swift */; };
+		8D41E93423E8973000686C59 /* CellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93323E8973000686C59 /* CellItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +129,10 @@
 		8D41E92123E7375E00686C59 /* TasksViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewReactor.swift; sourceTree = "<group>"; };
 		8D41E92723E738DA00686C59 /* CreateTaskViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewReactor.swift; sourceTree = "<group>"; };
 		8D41E92923E73DC900686C59 /* UIViewController+instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+instantiate.swift"; sourceTree = "<group>"; };
+		8D41E92D23E8969F00686C59 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
+		8D41E92F23E896AF00686C59 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		8D41E93123E8971B00686C59 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		8D41E93323E8973000686C59 /* CellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +201,10 @@
 		8D352B4323DF1C9000FD01F2 /* GraphQLToDo */ = {
 			isa = PBXGroup;
 			children = (
-				8D41E92C23E8940300686C59 /* Conponent */,
+				8D41E93723E897A700686C59 /* Store */,
+				8D41E93623E8979900686C59 /* Presentable */,
+				8D41E93523E8978900686C59 /* Coordinator */,
+				8D41E92C23E8940300686C59 /* Component */,
 				8D41E92B23E893D200686C59 /* CellModel */,
 				8D41E90923E4A15C00686C59 /* Entities */,
 				8D352BB423E1FF7200FD01F2 /* Extension */,
@@ -351,15 +362,40 @@
 		8D41E92B23E893D200686C59 /* CellModel */ = {
 			isa = PBXGroup;
 			children = (
+				8D41E93123E8971B00686C59 /* SectionModel.swift */,
+				8D41E93323E8973000686C59 /* CellItem.swift */,
 			);
 			path = CellModel;
 			sourceTree = "<group>";
 		};
-		8D41E92C23E8940300686C59 /* Conponent */ = {
+		8D41E92C23E8940300686C59 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				8D41E92D23E8969F00686C59 /* TaskCell.xib */,
+				8D41E92F23E896AF00686C59 /* TaskCell.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		8D41E93523E8978900686C59 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Conponent;
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8D41E93623E8979900686C59 /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentable;
+			sourceTree = "<group>";
+		};
+		8D41E93723E897A700686C59 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D41E92E23E8969F00686C59 /* TaskCell.xib in Resources */,
 				8D352BB123E1FBA000FD01F2 /* Task.graphql in Resources */,
 				8D41E91C23E7372000686C59 /* Task.storyboard in Resources */,
 				8D352B5123DF1C9000FD01F2 /* LaunchScreen.storyboard in Resources */,
@@ -554,12 +591,15 @@
 				8D41E91523E7316200686C59 /* TaskViewController.swift in Sources */,
 				8D41E92223E7375E00686C59 /* TasksViewReactor.swift in Sources */,
 				8D352B4523DF1C9000FD01F2 /* AppDelegate.swift in Sources */,
+				8D41E93223E8971B00686C59 /* SectionModel.swift in Sources */,
 				8D41E91123E6B9AD00686C59 /* AppAssembly.swift in Sources */,
 				8D41E90623E497D200686C59 /* TaskRepository.swift in Sources */,
 				8D352BB323E1FF6400FD01F2 /* API.swift in Sources */,
+				8D41E93423E8973000686C59 /* CellItem.swift in Sources */,
 				8D352BBA23E2172B00FD01F2 /* GraphQLProviderType.swift in Sources */,
 				8D352BBE23E2B38A00FD01F2 /* ApiType.swift in Sources */,
 				8D41E90F23E4B96800686C59 /* TaskFields+Equatable.swift in Sources */,
+				8D41E93023E896AF00686C59 /* TaskCell.swift in Sources */,
 				8D41E90B23E4A17700686C59 /* Pagination.swift in Sources */,
 				8D352B4723DF1C9000FD01F2 /* SceneDelegate.swift in Sources */,
 				8D352BBC23E2174B00FD01F2 /* GraphQLRepositoryType.swift in Sources */,
