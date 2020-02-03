@@ -56,6 +56,8 @@
 		8D41E93023E896AF00686C59 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E92F23E896AF00686C59 /* TaskCell.swift */; };
 		8D41E93223E8971B00686C59 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93123E8971B00686C59 /* SectionModel.swift */; };
 		8D41E93423E8973000686C59 /* CellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93323E8973000686C59 /* CellItem.swift */; };
+		8D41E93923E8981E00686C59 /* TaskPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93823E8981E00686C59 /* TaskPresentable.swift */; };
+		8D41E93B23E8983E00686C59 /* TaslCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93A23E8983D00686C59 /* TaslCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +135,8 @@
 		8D41E92F23E896AF00686C59 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		8D41E93123E8971B00686C59 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		8D41E93323E8973000686C59 /* CellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItem.swift; sourceTree = "<group>"; };
+		8D41E93823E8981E00686C59 /* TaskPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentable.swift; sourceTree = "<group>"; };
+		8D41E93A23E8983D00686C59 /* TaslCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaslCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +384,7 @@
 		8D41E93523E8978900686C59 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				8D41E93A23E8983D00686C59 /* TaslCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 		8D41E93623E8979900686C59 /* Presentable */ = {
 			isa = PBXGroup;
 			children = (
+				8D41E93823E8981E00686C59 /* TaskPresentable.swift */,
 			);
 			path = Presentable;
 			sourceTree = "<group>";
@@ -583,6 +589,7 @@
 				8D41E90823E4A05300686C59 /* TaskService.swift in Sources */,
 				8D352BB823E2164D00FD01F2 /* GraphQLApiType.swift in Sources */,
 				8D41E92A23E73DC900686C59 /* UIViewController+instantiate.swift in Sources */,
+				8D41E93923E8981E00686C59 /* TaskPresentable.swift in Sources */,
 				8D41E91323E7314F00686C59 /* TasksViewController.swift in Sources */,
 				8D352BB623E200E000FD01F2 /* Apollo+Rx.swift in Sources */,
 				8D41E92023E7374B00686C59 /* TaskViewReactor.swift in Sources */,
@@ -600,6 +607,7 @@
 				8D352BBE23E2B38A00FD01F2 /* ApiType.swift in Sources */,
 				8D41E90F23E4B96800686C59 /* TaskFields+Equatable.swift in Sources */,
 				8D41E93023E896AF00686C59 /* TaskCell.swift in Sources */,
+				8D41E93B23E8983E00686C59 /* TaslCoordinator.swift in Sources */,
 				8D41E90B23E4A17700686C59 /* Pagination.swift in Sources */,
 				8D352B4723DF1C9000FD01F2 /* SceneDelegate.swift in Sources */,
 				8D352BBC23E2174B00FD01F2 /* GraphQLRepositoryType.swift in Sources */,
