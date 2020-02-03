@@ -16,6 +16,7 @@ final class TasksViewController: UIViewController, StoryboardInstantiate {
 
     var disposeBag = DisposeBag()
 
+    @IBOutlet weak var tasksTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
