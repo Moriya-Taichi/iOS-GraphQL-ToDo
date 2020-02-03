@@ -6,4 +6,23 @@
 //  Copyright © 2020 Mori. All rights reserved.
 //
 
-import Foundation
+import ReactorKit
+import RxSwift
+import UIKit
+
+final class TaskViewController: UIViewController, StoryboardInstantiate {
+
+    static var storyboardName: StoryboardName = .task
+
+    var disposeBag = DisposeBag()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+
+extension TaskViewController: StoryboardView {
+    func bind(reactor: TaskViewReactor) {
+
+    }
+}
