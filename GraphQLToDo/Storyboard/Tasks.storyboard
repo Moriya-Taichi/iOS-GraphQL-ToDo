@@ -1,7 +1,41 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Tasks View Controller-->
+        <scene sceneID="s53-8P-kQJ">
+            <objects>
+                <viewController storyboardIdentifier="TasksVieewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hq5-Jw-quq" customClass="TasksViewController" customModule="GraphQLToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rNB-FW-ZgD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gpj-UK-q3L">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gpj-UK-q3L" secondAttribute="bottom" id="3ca-45-4It"/>
+                            <constraint firstItem="kah-aA-Plb" firstAttribute="trailing" secondItem="gpj-UK-q3L" secondAttribute="trailing" id="gKN-Jf-WkS"/>
+                            <constraint firstItem="gpj-UK-q3L" firstAttribute="top" secondItem="kah-aA-Plb" secondAttribute="top" id="o4Y-ft-TL5"/>
+                            <constraint firstItem="gpj-UK-q3L" firstAttribute="leading" secondItem="kah-aA-Plb" secondAttribute="leading" id="uyb-ev-I4a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kah-aA-Plb"/>
+                    </view>
+                    <connections>
+                        <outlet property="tasksTableView" destination="gpj-UK-q3L" id="i0q-K4-0cl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="om8-gV-Vvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
 </document>
