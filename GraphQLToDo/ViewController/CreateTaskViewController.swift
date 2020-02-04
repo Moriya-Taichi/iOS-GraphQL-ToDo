@@ -16,6 +16,12 @@ final class CreateTaskViewController: UIViewController, StoryboardInstantiate {
 
     var disposeBag = DisposeBag()
 
+    var callback: Callback?
+
+    struct Callback {
+        let close: (() -> Void)
+    }
+
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var backgroundCloseButton: UIButton!
     @IBOutlet private weak var createTaskButton: UIButton!
