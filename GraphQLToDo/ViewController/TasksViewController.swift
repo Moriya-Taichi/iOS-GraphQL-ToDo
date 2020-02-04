@@ -16,6 +16,13 @@ final class TasksViewController: UIViewController, StoryboardInstantiate {
 
     var disposeBag = DisposeBag()
 
+    var callback: Callback?
+
+    struct Callback {
+        let showTask:((_ identifier: String) -> Void)
+        let showCreateTask: (() -> Void)
+    }
+
     @IBOutlet weak var tasksTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
