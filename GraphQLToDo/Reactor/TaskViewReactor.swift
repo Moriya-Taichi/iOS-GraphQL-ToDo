@@ -24,7 +24,7 @@ final class TaskViewReactor: Reactor {
 
     }
 
-    init(taskService: TaskServiceType) {
+    init(identifier: String, taskService: TaskServiceType) {
         self.taskService = taskService
         initialState = State()
     }
