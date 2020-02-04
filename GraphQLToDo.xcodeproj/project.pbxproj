@@ -58,6 +58,7 @@
 		8D41E93423E8973000686C59 /* CellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93323E8973000686C59 /* CellItem.swift */; };
 		8D41E93923E8981E00686C59 /* TaskPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93823E8981E00686C59 /* TaskPresentable.swift */; };
 		8D41E93B23E8983E00686C59 /* TaslCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93A23E8983D00686C59 /* TaslCoordinator.swift */; };
+		8D41E93D23E9BBD600686C59 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93C23E9BBD600686C59 /* CoordinatorProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		8D41E93323E8973000686C59 /* CellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItem.swift; sourceTree = "<group>"; };
 		8D41E93823E8981E00686C59 /* TaskPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentable.swift; sourceTree = "<group>"; };
 		8D41E93A23E8983D00686C59 /* TaslCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaslCoordinator.swift; sourceTree = "<group>"; };
+		8D41E93C23E9BBD600686C59 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				8D41E93A23E8983D00686C59 /* TaslCoordinator.swift */,
+				8D41E93C23E9BBD600686C59 /* CoordinatorProtocol.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				8D41E92223E7375E00686C59 /* TasksViewReactor.swift in Sources */,
 				8D352B4523DF1C9000FD01F2 /* AppDelegate.swift in Sources */,
 				8D41E93223E8971B00686C59 /* SectionModel.swift in Sources */,
+				8D41E93D23E9BBD600686C59 /* CoordinatorProtocol.swift in Sources */,
 				8D41E91123E6B9AD00686C59 /* AppAssembly.swift in Sources */,
 				8D41E90623E497D200686C59 /* TaskRepository.swift in Sources */,
 				8D352BB323E1FF6400FD01F2 /* API.swift in Sources */,
