@@ -15,6 +15,8 @@ final class TaskViewReactor: Reactor {
     var initialState: State
 
     private let taskService: TaskServiceType
+    private let accessibleApolloStore: AccessibleApolloStoreType
+
     enum Action {
         case load
         case update
@@ -24,8 +26,12 @@ final class TaskViewReactor: Reactor {
 
     }
 
-    init(identifier: String, taskService: TaskServiceType) {
+    init(identifier: String,
+         taskService: TaskServiceType,
+         accessibleApolloStore: AccessibleApolloStoreType)
+    {
         self.taskService = taskService
+        self.accessibleApolloStore = accessibleApolloStore
         initialState = State()
     }
     

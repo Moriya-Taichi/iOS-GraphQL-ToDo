@@ -16,42 +16,44 @@ protocol TaskPresentable: class {
 }
 
 extension TaskPresentable where Self: NavigationCoordinator {
-
+    
     func showCreateTask() {
         self.presenter.present(createCreateTaskViewController(), animated: true, completion: nil)
     }
-
+    
     private func createCreateTaskViewController() -> CreateTaskViewController {
         let createTaskViewController = CreateTaskViewController.instantiate()
         createTaskViewController.reactor = CreateTaskViewReactor(taskService: resolver~>)
         createTaskViewController.callback = CreateTaskViewController.Callback(
             close: {
                 createTaskViewController.dismiss(animated: false, completion: nil)
-            }
+        }
         )
         return createTaskViewController
     }
-
+    
     func showTask(identifier: String) {
         self.navigationController.pushViewController(createTaskViewController(identifier: identifier), animated: true)
     }
-
+    
     private func createTaskViewController(identifier: String) -> TaskViewController {
         let taskViewController = TaskViewController.instantiate()
-        taskViewController.reactor = TaskViewReactor(identifier: identifier, taskService: resolver~>)
+        taskViewController.reactor = TaskViewReactor(identifier: identifier,
+                                                     taskService: resolver~>,
+                                                     accessibleApolloStore: resolver~>)
         return taskViewController
     }
-
+    
     func createTasksViewController() -> TasksViewController {
         let tasksViewController = TasksViewController.instantiate()
         tasksViewController.reactor = TasksViewReactor(taskService: resolver~>)
         tasksViewController.callback = TasksViewController.Callback(
             showTask: { identifier in
                 self.showTask(identifier: identifier)
-            },
+        },
             showCreateTask: {
                 self.showCreateTask()
-            }
+        }
         )
         return tasksViewController
     }
