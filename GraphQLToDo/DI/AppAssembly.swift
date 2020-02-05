@@ -22,5 +22,10 @@ final class AppAssembly: Assembly {
         container
             .autoregister(TaskServiceType.self, initializer: TaskService.init)
             .inObjectScope(.container)
+
+        container
+            .autoregister(AccessibleApolloStoreType.self,
+                          initializer: AccessibleApolloStore.init)
+            .inObjectScope(.container)
     }
 }

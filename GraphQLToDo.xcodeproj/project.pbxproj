@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		8D352B4523DF1C9000FD01F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B4423DF1C9000FD01F2 /* AppDelegate.swift */; };
 		8D352B4723DF1C9000FD01F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B4623DF1C9000FD01F2 /* SceneDelegate.swift */; };
-		8D352B4923DF1C9000FD01F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B4823DF1C9000FD01F2 /* ViewController.swift */; };
-		8D352B4C23DF1C9000FD01F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D352B4A23DF1C9000FD01F2 /* Main.storyboard */; };
 		8D352B4E23DF1C9000FD01F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D352B4D23DF1C9000FD01F2 /* Assets.xcassets */; };
 		8D352B5123DF1C9000FD01F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D352B4F23DF1C9000FD01F2 /* LaunchScreen.storyboard */; };
 		8D352B5C23DF1C9000FD01F2 /* GraphQLToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B5B23DF1C9000FD01F2 /* GraphQLToDoTests.swift */; };
@@ -42,6 +40,24 @@
 		8D41E90B23E4A17700686C59 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E90A23E4A17700686C59 /* Pagination.swift */; };
 		8D41E90F23E4B96800686C59 /* TaskFields+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E90E23E4B96800686C59 /* TaskFields+Equatable.swift */; };
 		8D41E91123E6B9AD00686C59 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E91023E6B9AD00686C59 /* AppAssembly.swift */; };
+		8D41E91323E7314F00686C59 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E91223E7314F00686C59 /* TasksViewController.swift */; };
+		8D41E91523E7316200686C59 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E91423E7316200686C59 /* TaskViewController.swift */; };
+		8D41E91723E7317F00686C59 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E91623E7317F00686C59 /* CreateTaskViewController.swift */; };
+		8D41E91A23E7371500686C59 /* Tasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D41E91923E7371500686C59 /* Tasks.storyboard */; };
+		8D41E91C23E7372000686C59 /* Task.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D41E91B23E7372000686C59 /* Task.storyboard */; };
+		8D41E91E23E7372D00686C59 /* CreateTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D41E91D23E7372D00686C59 /* CreateTask.storyboard */; };
+		8D41E92023E7374B00686C59 /* TaskViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E91F23E7374B00686C59 /* TaskViewReactor.swift */; };
+		8D41E92223E7375E00686C59 /* TasksViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E92123E7375E00686C59 /* TasksViewReactor.swift */; };
+		8D41E92823E738DA00686C59 /* CreateTaskViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E92723E738DA00686C59 /* CreateTaskViewReactor.swift */; };
+		8D41E92A23E73DC900686C59 /* UIViewController+instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E92923E73DC900686C59 /* UIViewController+instantiate.swift */; };
+		8D41E92E23E8969F00686C59 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D41E92D23E8969F00686C59 /* TaskCell.xib */; };
+		8D41E93023E896AF00686C59 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E92F23E896AF00686C59 /* TaskCell.swift */; };
+		8D41E93223E8971B00686C59 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93123E8971B00686C59 /* SectionModel.swift */; };
+		8D41E93423E8973000686C59 /* CellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93323E8973000686C59 /* CellItem.swift */; };
+		8D41E93923E8981E00686C59 /* TaskPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93823E8981E00686C59 /* TaskPresentable.swift */; };
+		8D41E93B23E8983E00686C59 /* TaskCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93A23E8983D00686C59 /* TaskCoordinator.swift */; };
+		8D41E93D23E9BBD600686C59 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93C23E9BBD600686C59 /* CoordinatorProtocol.swift */; };
+		8D41E94123EB110100686C59 /* AccessibleApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E94023EB110100686C59 /* AccessibleApolloStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +81,6 @@
 		8D352B4123DF1C9000FD01F2 /* GraphQLToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphQLToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D352B4423DF1C9000FD01F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D352B4623DF1C9000FD01F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8D352B4823DF1C9000FD01F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8D352B4B23DF1C9000FD01F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D352B4D23DF1C9000FD01F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D352B5023DF1C9000FD01F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D352B5223DF1C9000FD01F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +119,24 @@
 		8D41E90A23E4A17700686C59 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		8D41E90E23E4B96800686C59 /* TaskFields+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskFields+Equatable.swift"; sourceTree = "<group>"; };
 		8D41E91023E6B9AD00686C59 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		8D41E91223E7314F00686C59 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		8D41E91423E7316200686C59 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		8D41E91623E7317F00686C59 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		8D41E91923E7371500686C59 /* Tasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tasks.storyboard; sourceTree = "<group>"; };
+		8D41E91B23E7372000686C59 /* Task.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Task.storyboard; sourceTree = "<group>"; };
+		8D41E91D23E7372D00686C59 /* CreateTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateTask.storyboard; sourceTree = "<group>"; };
+		8D41E91F23E7374B00686C59 /* TaskViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewReactor.swift; sourceTree = "<group>"; };
+		8D41E92123E7375E00686C59 /* TasksViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewReactor.swift; sourceTree = "<group>"; };
+		8D41E92723E738DA00686C59 /* CreateTaskViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewReactor.swift; sourceTree = "<group>"; };
+		8D41E92923E73DC900686C59 /* UIViewController+instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+instantiate.swift"; sourceTree = "<group>"; };
+		8D41E92D23E8969F00686C59 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
+		8D41E92F23E896AF00686C59 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		8D41E93123E8971B00686C59 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		8D41E93323E8973000686C59 /* CellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItem.swift; sourceTree = "<group>"; };
+		8D41E93823E8981E00686C59 /* TaskPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentable.swift; sourceTree = "<group>"; };
+		8D41E93A23E8983D00686C59 /* TaskCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCoordinator.swift; sourceTree = "<group>"; };
+		8D41E93C23E9BBD600686C59 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		8D41E94023EB110100686C59 /* AccessibleApolloStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleApolloStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,17 +205,21 @@
 		8D352B4323DF1C9000FD01F2 /* GraphQLToDo */ = {
 			isa = PBXGroup;
 			children = (
+				8D41E93723E897A700686C59 /* Store */,
+				8D41E93623E8979900686C59 /* Presentable */,
+				8D41E93523E8978900686C59 /* Coordinator */,
+				8D41E92C23E8940300686C59 /* Component */,
+				8D41E92B23E893D200686C59 /* CellModel */,
 				8D41E90923E4A15C00686C59 /* Entities */,
 				8D352BB423E1FF7200FD01F2 /* Extension */,
 				8D352BAB23DF4F4900FD01F2 /* DI */,
 				8D352BA823DF4E2700FD01F2 /* Service */,
 				8D352BA723DF4E1700FD01F2 /* Reactor */,
 				8D352BA623DF4DFC00FD01F2 /* ViewController */,
+				8D41E91823E7318D00686C59 /* Storyboard */,
 				8D352BA523DF494000FD01F2 /* Networking */,
 				8D352B4423DF1C9000FD01F2 /* AppDelegate.swift */,
 				8D352B4623DF1C9000FD01F2 /* SceneDelegate.swift */,
-				8D352B4823DF1C9000FD01F2 /* ViewController.swift */,
-				8D352B4A23DF1C9000FD01F2 /* Main.storyboard */,
 				8D352B4D23DF1C9000FD01F2 /* Assets.xcassets */,
 				8D352B4F23DF1C9000FD01F2 /* LaunchScreen.storyboard */,
 				8D352B5223DF1C9000FD01F2 /* Info.plist */,
@@ -244,6 +280,9 @@
 		8D352BA623DF4DFC00FD01F2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8D41E91223E7314F00686C59 /* TasksViewController.swift */,
+				8D41E91423E7316200686C59 /* TaskViewController.swift */,
+				8D41E91623E7317F00686C59 /* CreateTaskViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -251,6 +290,9 @@
 		8D352BA723DF4E1700FD01F2 /* Reactor */ = {
 			isa = PBXGroup;
 			children = (
+				8D41E91F23E7374B00686C59 /* TaskViewReactor.swift */,
+				8D41E92123E7375E00686C59 /* TasksViewReactor.swift */,
+				8D41E92723E738DA00686C59 /* CreateTaskViewReactor.swift */,
 			);
 			path = Reactor;
 			sourceTree = "<group>";
@@ -296,6 +338,7 @@
 			children = (
 				8D352BB523E200E000FD01F2 /* Apollo+Rx.swift */,
 				8D41E90E23E4B96800686C59 /* TaskFields+Equatable.swift */,
+				8D41E92923E73DC900686C59 /* UIViewController+instantiate.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -306,6 +349,59 @@
 				8D41E90A23E4A17700686C59 /* Pagination.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		8D41E91823E7318D00686C59 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8D41E91923E7371500686C59 /* Tasks.storyboard */,
+				8D41E91B23E7372000686C59 /* Task.storyboard */,
+				8D41E91D23E7372D00686C59 /* CreateTask.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		8D41E92B23E893D200686C59 /* CellModel */ = {
+			isa = PBXGroup;
+			children = (
+				8D41E93123E8971B00686C59 /* SectionModel.swift */,
+				8D41E93323E8973000686C59 /* CellItem.swift */,
+			);
+			path = CellModel;
+			sourceTree = "<group>";
+		};
+		8D41E92C23E8940300686C59 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				8D41E92D23E8969F00686C59 /* TaskCell.xib */,
+				8D41E92F23E896AF00686C59 /* TaskCell.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		8D41E93523E8978900686C59 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8D41E93A23E8983D00686C59 /* TaskCoordinator.swift */,
+				8D41E93C23E9BBD600686C59 /* CoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8D41E93623E8979900686C59 /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+				8D41E93823E8981E00686C59 /* TaskPresentable.swift */,
+			);
+			path = Presentable;
+			sourceTree = "<group>";
+		};
+		8D41E93723E897A700686C59 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				8D41E94023EB110100686C59 /* AccessibleApolloStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,10 +510,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D41E92E23E8969F00686C59 /* TaskCell.xib in Resources */,
 				8D352BB123E1FBA000FD01F2 /* Task.graphql in Resources */,
+				8D41E91C23E7372000686C59 /* Task.storyboard in Resources */,
 				8D352B5123DF1C9000FD01F2 /* LaunchScreen.storyboard in Resources */,
 				8D352B4E23DF1C9000FD01F2 /* Assets.xcassets in Resources */,
-				8D352B4C23DF1C9000FD01F2 /* Main.storyboard in Resources */,
+				8D41E91A23E7371500686C59 /* Tasks.storyboard in Resources */,
+				8D41E91E23E7372D00686C59 /* CreateTask.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,17 +584,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D41E92823E738DA00686C59 /* CreateTaskViewReactor.swift in Sources */,
 				8D41E90823E4A05300686C59 /* TaskService.swift in Sources */,
 				8D352BB823E2164D00FD01F2 /* GraphQLApiType.swift in Sources */,
+				8D41E92A23E73DC900686C59 /* UIViewController+instantiate.swift in Sources */,
+				8D41E93923E8981E00686C59 /* TaskPresentable.swift in Sources */,
+				8D41E91323E7314F00686C59 /* TasksViewController.swift in Sources */,
+				8D41E94123EB110100686C59 /* AccessibleApolloStore.swift in Sources */,
 				8D352BB623E200E000FD01F2 /* Apollo+Rx.swift in Sources */,
-				8D352B4923DF1C9000FD01F2 /* ViewController.swift in Sources */,
+				8D41E92023E7374B00686C59 /* TaskViewReactor.swift in Sources */,
+				8D41E91723E7317F00686C59 /* CreateTaskViewController.swift in Sources */,
+				8D41E91523E7316200686C59 /* TaskViewController.swift in Sources */,
+				8D41E92223E7375E00686C59 /* TasksViewReactor.swift in Sources */,
 				8D352B4523DF1C9000FD01F2 /* AppDelegate.swift in Sources */,
+				8D41E93223E8971B00686C59 /* SectionModel.swift in Sources */,
+				8D41E93D23E9BBD600686C59 /* CoordinatorProtocol.swift in Sources */,
 				8D41E91123E6B9AD00686C59 /* AppAssembly.swift in Sources */,
 				8D41E90623E497D200686C59 /* TaskRepository.swift in Sources */,
 				8D352BB323E1FF6400FD01F2 /* API.swift in Sources */,
+				8D41E93423E8973000686C59 /* CellItem.swift in Sources */,
 				8D352BBA23E2172B00FD01F2 /* GraphQLProviderType.swift in Sources */,
 				8D352BBE23E2B38A00FD01F2 /* ApiType.swift in Sources */,
 				8D41E90F23E4B96800686C59 /* TaskFields+Equatable.swift in Sources */,
+				8D41E93023E896AF00686C59 /* TaskCell.swift in Sources */,
+				8D41E93B23E8983E00686C59 /* TaskCoordinator.swift in Sources */,
 				8D41E90B23E4A17700686C59 /* Pagination.swift in Sources */,
 				8D352B4723DF1C9000FD01F2 /* SceneDelegate.swift in Sources */,
 				8D352BBC23E2174B00FD01F2 /* GraphQLRepositoryType.swift in Sources */,
@@ -534,14 +646,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8D352B4A23DF1C9000FD01F2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8D352B4B23DF1C9000FD01F2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8D352B4F23DF1C9000FD01F2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
