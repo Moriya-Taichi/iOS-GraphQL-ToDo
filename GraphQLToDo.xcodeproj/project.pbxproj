@@ -58,6 +58,7 @@
 		8D41E93B23E8983E00686C59 /* TaskCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93A23E8983D00686C59 /* TaskCoordinator.swift */; };
 		8D41E93D23E9BBD600686C59 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93C23E9BBD600686C59 /* CoordinatorProtocol.swift */; };
 		8D41E94123EB110100686C59 /* AccessibleApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E94023EB110100686C59 /* AccessibleApolloStore.swift */; };
+		8D41E94323ED537500686C59 /* TaskCellRector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E94223ED537500686C59 /* TaskCellRector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		8D41E93A23E8983D00686C59 /* TaskCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCoordinator.swift; sourceTree = "<group>"; };
 		8D41E93C23E9BBD600686C59 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		8D41E94023EB110100686C59 /* AccessibleApolloStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleApolloStore.swift; sourceTree = "<group>"; };
+		8D41E94223ED537500686C59 /* TaskCellRector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellRector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +377,7 @@
 			children = (
 				8D41E92D23E8969F00686C59 /* TaskCell.xib */,
 				8D41E92F23E896AF00686C59 /* TaskCell.swift */,
+				8D41E94223ED537500686C59 /* TaskCellRector.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				8D352BB823E2164D00FD01F2 /* GraphQLApiType.swift in Sources */,
 				8D41E92A23E73DC900686C59 /* UIViewController+instantiate.swift in Sources */,
 				8D41E93923E8981E00686C59 /* TaskPresentable.swift in Sources */,
+				8D41E94323ED537500686C59 /* TaskCellRector.swift in Sources */,
 				8D41E91323E7314F00686C59 /* TasksViewController.swift in Sources */,
 				8D41E94123EB110100686C59 /* AccessibleApolloStore.swift in Sources */,
 				8D352BB623E200E000FD01F2 /* Apollo+Rx.swift in Sources */,
