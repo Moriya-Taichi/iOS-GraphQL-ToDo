@@ -19,9 +19,9 @@ enum CellItem: Identifiable, Equatable {
     var identity: Identity {
         switch self {
         case let .task(task):
-            return "Task:\(task.id)"
+            return "Task:\(task.identifier)"
         }
     }
 
-    case task(TaskFields)
+    case task(TaskCellReactor)
 }
