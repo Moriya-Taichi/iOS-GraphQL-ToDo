@@ -13,7 +13,7 @@ final class TasksViewReactor: Reactor {
 
     var initialState: State
 
-    private let taskService: TaskServiceType
+    let taskService: TaskServiceType
 
     enum Action {
         case load
@@ -24,15 +24,19 @@ final class TasksViewReactor: Reactor {
         case setIsCompleted(Bool)
         case setIsLoading(Bool)
         case setTaskOrder(TaskOrderFields)
-        case setTasks(Pagination<TaskFields>)
-        case addNextTaskPage(Pagination<TaskFields>)
+        case setTasks(Pagination<CellItem>)
+        case addNextTaskPage(Pagination<CellItem>)
     }
 
     struct State {
         var isLoading: Bool
-        var tasks: Pagination<TaskFields>
+        var tasks: Pagination<CellItem>
         var taskOrder: TaskOrderFields
         var isCompleted: Bool?
+
+        var taskCellItemSection: CellItemSection {
+            return CellItemSection.init(model: .task, items: tasks.pageElements)
+        }
     }
 
     init(taskService: TaskServiceType) {
@@ -56,6 +60,16 @@ final class TasksViewReactor: Reactor {
                                                order: state.taskOrder,
                                                endSursor: "",
                                                hasNext: false)
+                .map { page in
+                    let cellItem = page.pageElements.map { CellItem.task(
+                        TaskCellReactor(taskService: self.taskService, task: $0)
+                        )
+                    }
+
+                    return Pagination(pageElements: cellItem,
+                                      hasNextPage: page.hasNextPage,
+                                      endCursor: page.endCursor)
+                }
                 .map(Mutation.setTasks)
             let endLoading: Observable<Mutation> = .just(.setIsLoading(false))
             return .concat([startLoading, tasks, endLoading])
@@ -68,6 +82,16 @@ final class TasksViewReactor: Reactor {
                                                   order: state.taskOrder,
                                                   endSursor: state.tasks.endCursor,
                                                   hasNext: state.tasks.hasNextPage)
+                .map { page in
+                    let cellItem = page.pageElements.map { CellItem.task(
+                        TaskCellReactor(taskService: self.taskService, task: $0)
+                        )
+                    }
+
+                    return Pagination(pageElements: cellItem,
+                                      hasNextPage: page.hasNextPage,
+                                      endCursor: page.endCursor)
+                }
                 .map(Mutation.addNextTaskPage)
             let endLoading: Observable<Mutation> = .just(.setIsLoading(false))
             return .concat([startLoading, nextPage, endLoading])
