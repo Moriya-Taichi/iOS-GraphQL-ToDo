@@ -161,11 +161,16 @@
                         <outlet property="contentView" destination="0a7-kh-hVI" id="S90-G2-Yni"/>
                         <outlet property="createTaskButton" destination="BbS-GH-Rm2" id="Jfb-eD-xAo"/>
                         <outlet property="dueTextView" destination="1V2-O1-gdC" id="fiX-U7-GBA"/>
+                        <outlet property="inputDatePicker" destination="aBU-CZ-KSf" id="37K-nq-FgG"/>
                         <outlet property="noteTextView" destination="7tc-dn-RwB" id="1Sq-p0-sSL"/>
                         <outlet property="titleTextField" destination="a26-oD-hWA" id="6cp-v1-n4E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yu5-rD-Oej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="aBU-CZ-KSf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                </datePicker>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
