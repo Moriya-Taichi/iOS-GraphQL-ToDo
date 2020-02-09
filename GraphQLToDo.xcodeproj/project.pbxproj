@@ -14,7 +14,6 @@
 		8D352B5C23DF1C9000FD01F2 /* GraphQLToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B5B23DF1C9000FD01F2 /* GraphQLToDoTests.swift */; };
 		8D352B6723DF1C9000FD01F2 /* GraphQLToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D352B6623DF1C9000FD01F2 /* GraphQLToDoUITests.swift */; };
 		8D352B8523DF438700FD01F2 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7623DF438700FD01F2 /* RxDataSources.framework */; };
-		8D352B8723DF438700FD01F2 /* ApolloWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7723DF438700FD01F2 /* ApolloWebSocket.framework */; };
 		8D352B8923DF438700FD01F2 /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7823DF438700FD01F2 /* Apollo.framework */; };
 		8D352B8B23DF438700FD01F2 /* SDWebImageMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7923DF438700FD01F2 /* SDWebImageMapKit.framework */; };
 		8D352B8D23DF438700FD01F2 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7A23DF438700FD01F2 /* SDWebImage.framework */; };
@@ -24,7 +23,6 @@
 		8D352B9523DF438700FD01F2 /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7E23DF438700FD01F2 /* RxOptional.framework */; };
 		8D352B9723DF438700FD01F2 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B7F23DF438700FD01F2 /* ReactorKit.framework */; };
 		8D352B9923DF438700FD01F2 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8023DF438700FD01F2 /* ReactorKitRuntime.framework */; };
-		8D352B9B23DF438700FD01F2 /* ApolloSQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8123DF438700FD01F2 /* ApolloSQLite.framework */; };
 		8D352B9D23DF438700FD01F2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8223DF438700FD01F2 /* RxCocoa.framework */; };
 		8D352B9F23DF438700FD01F2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8323DF438700FD01F2 /* RxSwift.framework */; };
 		8D352BA123DF438700FD01F2 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D352B8423DF438700FD01F2 /* Differentiator.framework */; };
@@ -161,8 +159,6 @@
 				8D352B9923DF438700FD01F2 /* ReactorKitRuntime.framework in Frameworks */,
 				8D352B8523DF438700FD01F2 /* RxDataSources.framework in Frameworks */,
 				8D352B9123DF438700FD01F2 /* SwinjectAutoregistration.framework in Frameworks */,
-				8D352B8723DF438700FD01F2 /* ApolloWebSocket.framework in Frameworks */,
-				8D352B9B23DF438700FD01F2 /* ApolloSQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,7 +802,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mori.GraphQLToDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -829,7 +825,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mori.GraphQLToDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
