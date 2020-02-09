@@ -22,8 +22,6 @@ $(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework
 
 #Network
 $(SRCROOT)/Carthage/Build/iOS/Apollo.framework
-$(SRCROOT)/Carthage/Build/iOS/ApolloSQLite.framework
-$(SRCROOT)/Carthage/Build/iOS/ApolloWebSocket.framework
 
 #Utility
 $(SRCROOT)/Carthage/Build/iOS/Differentiator.framework
