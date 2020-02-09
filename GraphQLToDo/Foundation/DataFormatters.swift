@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+enum DateFormatters {
+    static let rfc3339: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd' 'HH':'mm':'ss ZZZZZ 'UTC'"
+        dateFormatter.timeZone = TimeZone.current
+        return dateFormatter
+    }()
+}
