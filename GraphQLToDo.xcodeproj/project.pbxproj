@@ -59,6 +59,7 @@
 		8D41E93D23E9BBD600686C59 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E93C23E9BBD600686C59 /* CoordinatorProtocol.swift */; };
 		8D41E94123EB110100686C59 /* AccessibleApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E94023EB110100686C59 /* AccessibleApolloStore.swift */; };
 		8D41E94323ED537500686C59 /* TaskCellRector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E94223ED537500686C59 /* TaskCellRector.swift */; };
+		8D41E94623F04B5E00686C59 /* DataFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E94523F04B5E00686C59 /* DataFormatters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		8D41E93C23E9BBD600686C59 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		8D41E94023EB110100686C59 /* AccessibleApolloStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleApolloStore.swift; sourceTree = "<group>"; };
 		8D41E94223ED537500686C59 /* TaskCellRector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellRector.swift; sourceTree = "<group>"; };
+		8D41E94523F04B5E00686C59 /* DataFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 		8D352B4323DF1C9000FD01F2 /* GraphQLToDo */ = {
 			isa = PBXGroup;
 			children = (
+				8D41E94423F04B3500686C59 /* Foundation */,
 				8D41E93723E897A700686C59 /* Store */,
 				8D41E93623E8979900686C59 /* Presentable */,
 				8D41E93523E8978900686C59 /* Coordinator */,
@@ -407,6 +410,14 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		8D41E94423F04B3500686C59 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				8D41E94523F04B5E00686C59 /* DataFormatters.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -603,6 +614,7 @@
 				8D352B4523DF1C9000FD01F2 /* AppDelegate.swift in Sources */,
 				8D41E93223E8971B00686C59 /* SectionModel.swift in Sources */,
 				8D41E93D23E9BBD600686C59 /* CoordinatorProtocol.swift in Sources */,
+				8D41E94623F04B5E00686C59 /* DataFormatters.swift in Sources */,
 				8D41E91123E6B9AD00686C59 /* AppAssembly.swift in Sources */,
 				8D41E90623E497D200686C59 /* TaskRepository.swift in Sources */,
 				8D352BB323E1FF6400FD01F2 /* API.swift in Sources */,
