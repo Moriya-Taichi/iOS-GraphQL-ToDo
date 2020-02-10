@@ -58,6 +58,7 @@
 		8D41E94123EB110100686C59 /* AccessibleApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E94023EB110100686C59 /* AccessibleApolloStore.swift */; };
 		8D41E94323ED537500686C59 /* TaskCellRector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E94223ED537500686C59 /* TaskCellRector.swift */; };
 		8D41E94623F04B5E00686C59 /* DataFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E94523F04B5E00686C59 /* DataFormatters.swift */; };
+		8DE7401723F1572F00EAB8E0 /* UIScrolView+TouchBegan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE7401623F1572F00EAB8E0 /* UIScrolView+TouchBegan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		8D41E94023EB110100686C59 /* AccessibleApolloStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleApolloStore.swift; sourceTree = "<group>"; };
 		8D41E94223ED537500686C59 /* TaskCellRector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellRector.swift; sourceTree = "<group>"; };
 		8D41E94523F04B5E00686C59 /* DataFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatters.swift; sourceTree = "<group>"; };
+		8DE7401623F1572F00EAB8E0 /* UIScrolView+TouchBegan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrolView+TouchBegan.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +342,7 @@
 				8D352BB523E200E000FD01F2 /* Apollo+Rx.swift */,
 				8D41E90E23E4B96800686C59 /* TaskFields+Equatable.swift */,
 				8D41E92923E73DC900686C59 /* UIViewController+instantiate.swift */,
+				8DE7401623F1572F00EAB8E0 /* UIScrolView+TouchBegan.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				8D41E93B23E8983E00686C59 /* TaskCoordinator.swift in Sources */,
 				8D41E90B23E4A17700686C59 /* Pagination.swift in Sources */,
 				8D352B4723DF1C9000FD01F2 /* SceneDelegate.swift in Sources */,
+				8DE7401723F1572F00EAB8E0 /* UIScrolView+TouchBegan.swift in Sources */,
 				8D352BBC23E2174B00FD01F2 /* GraphQLRepositoryType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
