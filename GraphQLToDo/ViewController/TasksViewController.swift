@@ -33,8 +33,16 @@ final class TasksViewController: UIViewController, StoryboardInstantiate {
             tasksTableView.refreshControl = refleshControl
         }
     }
+    @IBOutlet private weak var createTaskButton: UIButton! {
+        didSet {
+            createTaskButton.layer.cornerRadius = createTaskButton.frame.width / 2
+            createTaskButton.backgroundColor = .systemYellow
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        SetupRx()
+        navigationItem.title = "Tasks"
     }
 
     private func SetupRx() {
@@ -48,6 +56,13 @@ final class TasksViewController: UIViewController, StoryboardInstantiate {
                     self?.callback?.showTask(task.identifier)
                 }
             }).disposed(by: disposeBag)
+
+        createTaskButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
+            .subscribe(onNext: {[weak self] in
+                self?.callback?.showCreateTask()
+            })
+            .disposed(by: disposeBag)
     }
 }
 
