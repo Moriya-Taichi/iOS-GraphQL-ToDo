@@ -17,10 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let _ = (scene as? UIWindowScene) else { return }
-        coordinator = TaskCoordinator(presenter: UINavigationController(), resolver: assembler.resolver)
+        guard let scene = (scene as? UIWindowScene) else { return }
+        coordinator = TaskCoordinator(presenter: UINavigationController(),
+                                      resolver: assembler.resolver)
         coordinator?.start()
-        window = UIWindow(frame: UIScreen.main.bounds)
+        window = UIWindow(windowScene: scene)
         window?.rootViewController = coordinator?.presenter
         window?.makeKeyAndVisible()
     }
