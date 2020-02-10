@@ -23,10 +23,11 @@ extension TaskPresentable where Self: NavigationCoordinator {
 
     private func createCreateTaskViewController() -> CreateTaskViewController {
         let createTaskViewController = CreateTaskViewController.instantiate()
+        createTaskViewController.modalTransitionStyle = .crossDissolve
         createTaskViewController.reactor = CreateTaskViewReactor(taskService: resolver~>)
         createTaskViewController.callback = CreateTaskViewController.Callback(
             close: {
-                createTaskViewController.dismiss(animated: false, completion: nil)
+                createTaskViewController.dismiss(animated: true, completion: nil)
         }
         )
         return createTaskViewController
