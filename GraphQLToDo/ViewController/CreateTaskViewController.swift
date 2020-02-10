@@ -27,16 +27,35 @@ final class CreateTaskViewController: UIViewController, StoryboardInstantiate {
     
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var backgroundCloseButton: UIButton!
-    @IBOutlet private weak var createTaskButton: UIButton!
+    @IBOutlet private weak var createTaskButton: UIButton! {
+        didSet {
+            createTaskButton.layer.borderWidth = 1
+            createTaskButton.layer.borderColor = UIColor.black.cgColor
+            createTaskButton.layer.cornerRadius = 20
+        }
+    }
 
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var dueTextView: UITextView!
-    @IBOutlet private weak var completedButton: UIButton!
+    @IBOutlet private weak var completedButton: UIButton! {
+        didSet {
+            completedButton.setImage(#imageLiteral(resourceName: "CheckedImage").withRenderingMode(.alwaysOriginal),
+                                     for: .selected)
+            completedButton.setImage(#imageLiteral(resourceName: "CheckImage").withRenderingMode(.alwaysOriginal),
+                                     for: .normal)
+        }
+    }
     @IBOutlet private weak var noteTextView: UITextView!
 
     @IBOutlet private weak var contentView: UIView! {
         didSet {
             contentView.layer.cornerRadius = 15
+        }
+    }
+
+    @IBOutlet weak var contentScrolView: UIScrollView! {
+        didSet {
+            contentScrolView.layer.cornerRadius = 15
         }
     }
     
@@ -48,6 +67,10 @@ final class CreateTaskViewController: UIViewController, StoryboardInstantiate {
 
     private func setupView() {
         dueTextView.inputView = inputDatePicker
+        self.view.backgroundColor = UIColor(red: 0,
+                                            green: 0,
+                                            blue: 0,
+                                            alpha: 0.3)
     }
 
     private func setupRx() {
@@ -97,7 +120,9 @@ extension CreateTaskViewController: StoryboardView {
 
         inputDatePicker.rx.date
             .do(onNext: {[weak self] in
-                self?.dueTextView.text = DateFormatters.rfc3339.string(from: $0)
+                let dateString = DateFormatters.rfc3339.string(from: $0)
+                let shortString = String(dateString.prefix(dateString.count - 14))
+                self?.dueTextView.text = shortString
             })
             .map(Reactor.Action.setDue)
             .bind(to: reactor.action)
@@ -124,3 +149,8 @@ extension CreateTaskViewController: StoryboardView {
     }
 }
 
+extension CreateTaskViewController: UITextViewDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}
