@@ -10,7 +10,7 @@
         <!--Create Task View Controller-->
         <scene sceneID="dSR-nk-TUb">
             <objects>
-                <viewController storyboardIdentifier="CreateTaskViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kGg-jw-Kjo" customClass="CreateTaskViewController" customModule="GraphQLToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateTaskViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kGg-jw-Kjo" customClass="CreateTaskViewController" customModule="GraphQLToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nHW-Up-rDe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,18 +20,11 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8P-XO-RLX" userLabel="Content Scroll View">
-                                <rect key="frame" x="62" y="269" width="290" height="358"/>
+                                <rect key="frame" x="62" y="201.5" width="290" height="493"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0a7-kh-hVI" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="358"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="493"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7tc-dn-RwB">
-                                                <rect key="frame" x="103" y="173" width="172" height="115"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a26-oD-hWA">
                                                 <rect key="frame" x="103" y="23" width="172" height="25"/>
                                                 <constraints>
@@ -40,14 +33,14 @@
                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1V2-O1-gdC">
-                                                <rect key="frame" x="103" y="68" width="172" height="35"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1V2-O1-gdC">
+                                                <rect key="frame" x="103" y="68" width="172" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="F9z-7Y-yTS"/>
+                                                    <constraint firstAttribute="height" constant="30" id="F9z-7Y-yTS"/>
                                                 </constraints>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMl-Cm-mXq">
@@ -57,41 +50,55 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp8-CM-lMh">
-                                                <rect key="frame" x="59" y="77" width="34" height="17"/>
+                                                <rect key="frame" x="59" y="74.5" width="34" height="17"/>
                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="完了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6y-99-xmc">
-                                                <rect key="frame" x="59" y="124.5" width="34" height="17"/>
+                                                <rect key="frame" x="59" y="119.5" width="34" height="17"/>
                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OV-x6-2KB">
-                                                <rect key="frame" x="103" y="123" width="20" height="20"/>
+                                                <rect key="frame" x="103" y="118" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="7OV-x6-2KB" secondAttribute="height" multiplier="1:1" id="Jex-1Q-Qk2"/>
                                                     <constraint firstAttribute="width" constant="20" id="ZwP-aJ-gVo"/>
                                                 </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="selected">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xG-dr-mFI">
-                                                <rect key="frame" x="59" y="173" width="34" height="17"/>
+                                                <rect key="frame" x="59" y="178" width="34" height="17"/>
                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbS-GH-Rm2" userLabel="Create Button">
-                                                <rect key="frame" x="95" y="303" width="100" height="40"/>
+                                                <rect key="frame" x="95" y="438" width="100" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="4Hb-fS-zCq"/>
                                                     <constraint firstAttribute="height" constant="40" id="BHF-ND-kze"/>
                                                 </constraints>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="作成">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7tc-dn-RwB">
+                                                <rect key="frame" x="103" y="168" width="172" height="255"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -105,7 +112,7 @@
                                             <constraint firstItem="BbS-GH-Rm2" firstAttribute="top" secondItem="7tc-dn-RwB" secondAttribute="bottom" constant="15" id="Hak-Hc-PIL"/>
                                             <constraint firstItem="2xG-dr-mFI" firstAttribute="trailing" secondItem="aMl-Cm-mXq" secondAttribute="trailing" id="NeV-YG-brq"/>
                                             <constraint firstItem="aMl-Cm-mXq" firstAttribute="centerY" secondItem="a26-oD-hWA" secondAttribute="centerY" id="PON-aR-qVL"/>
-                                            <constraint firstItem="7tc-dn-RwB" firstAttribute="top" secondItem="2xG-dr-mFI" secondAttribute="top" id="QSu-SA-EyY"/>
+                                            <constraint firstItem="7tc-dn-RwB" firstAttribute="top" secondItem="2xG-dr-mFI" secondAttribute="top" constant="-10" id="QSu-SA-EyY"/>
                                             <constraint firstItem="aMl-Cm-mXq" firstAttribute="leading" secondItem="0a7-kh-hVI" secondAttribute="leading" constant="25" id="RU7-Qg-8lL"/>
                                             <constraint firstItem="7tc-dn-RwB" firstAttribute="trailing" secondItem="a26-oD-hWA" secondAttribute="trailing" id="Y0a-1p-pJJ"/>
                                             <constraint firstItem="1V2-O1-gdC" firstAttribute="leading" secondItem="a26-oD-hWA" secondAttribute="leading" id="Y7t-Vn-3V4"/>
@@ -130,7 +137,7 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgh-hm-2x7" userLabel="Close Button">
-                                <rect key="frame" x="62" y="224" width="40" height="40"/>
+                                <rect key="frame" x="62" y="156.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="LXH-06-5Fv"/>
                                     <constraint firstAttribute="width" secondItem="Cgh-hm-2x7" secondAttribute="height" multiplier="1:1" id="oGx-Fz-S2o"/>
@@ -141,7 +148,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="I8P-XO-RLX" firstAttribute="height" secondItem="nHW-Up-rDe" secondAttribute="height" multiplier="0.4" id="8bM-Ud-K0S"/>
+                            <constraint firstItem="I8P-XO-RLX" firstAttribute="height" secondItem="nHW-Up-rDe" secondAttribute="height" multiplier="0.55" id="8bM-Ud-K0S"/>
                             <constraint firstItem="I8P-XO-RLX" firstAttribute="width" secondItem="nHW-Up-rDe" secondAttribute="width" multiplier="0.7" id="9Av-vA-TFT"/>
                             <constraint firstItem="I8P-XO-RLX" firstAttribute="leading" secondItem="Cgh-hm-2x7" secondAttribute="leading" id="B7m-rm-dIz"/>
                             <constraint firstItem="csN-S6-LGJ" firstAttribute="leading" secondItem="nHW-Up-rDe" secondAttribute="leading" id="Of7-lq-BpS"/>
@@ -158,6 +165,7 @@
                         <outlet property="backgroundCloseButton" destination="csN-S6-LGJ" id="DYL-kQ-VWQ"/>
                         <outlet property="closeButton" destination="Cgh-hm-2x7" id="Tvj-kF-1hi"/>
                         <outlet property="completedButton" destination="7OV-x6-2KB" id="7Z1-I6-tDl"/>
+                        <outlet property="contentScrolView" destination="I8P-XO-RLX" id="pLg-aY-l4J"/>
                         <outlet property="contentView" destination="0a7-kh-hVI" id="S90-G2-Yni"/>
                         <outlet property="createTaskButton" destination="BbS-GH-Rm2" id="Jfb-eD-xAo"/>
                         <outlet property="dueTextView" destination="1V2-O1-gdC" id="fiX-U7-GBA"/>
@@ -170,6 +178,7 @@
                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="aBU-CZ-KSf">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <locale key="locale" localeIdentifier="ja"/>
                 </datePicker>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
