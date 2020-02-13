@@ -16,13 +16,30 @@ final class TaskViewController: UIViewController, StoryboardInstantiate {
 
     var disposeBag = DisposeBag()
 
+    @IBOutlet private weak var titleTextFIeld: UITextField!
+    @IBOutlet private weak var dueTextView: UITextView!
+    @IBOutlet private weak var completedButton: UIButton!
+    @IBOutlet private weak var notesTextField: UITextView!
+    @IBOutlet private var inputDatePicker: UIDatePicker!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+    }
+
+    private func setupView() {
+        dueTextView.inputView = inputDatePicker
     }
 }
 
 extension TaskViewController: StoryboardView {
     func bind(reactor: TaskViewReactor) {
 
+    }
+}
+
+extension TaskViewController: UITextViewDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
