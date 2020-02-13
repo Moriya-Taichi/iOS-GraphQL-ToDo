@@ -11,6 +11,8 @@ import RxSwift
 
 protocol TaskServiceType {
 
+    var createTaskStream: Observable<TaskFields> { get }
+
     func fetchTasks(
         completed: Bool?,
         order: TaskOrderFields,
@@ -32,6 +34,9 @@ protocol TaskServiceType {
         completed: Bool?,
         due: String?)
         -> Observable<TaskFields>
+
+    func onNextCreateTaskStream(task: TaskFields)
+    func onNextUpdateTaskStream(task: TaskFields)
 }
 
 final class TaskService: TaskServiceType {
@@ -40,6 +45,17 @@ final class TaskService: TaskServiceType {
 
     init(repository: TaskRepositoryType) {
         self.repository = repository
+    }
+
+    private let createTaskSubject = PublishSubject<TaskFields>()
+    private let updateTaskSubject = PublishSubject<TaskFields>()
+
+    var createTaskStream: Observable<TaskFields> {
+        return createTaskSubject
+    }
+
+    var updateTaskStream: Observable<TaskFields> {
+        return updateTaskSubject
     }
 
     func fetchTasks(
@@ -103,5 +119,13 @@ final class TaskService: TaskServiceType {
             .map { response in
                 return response.updateTask.fragments.taskFields
         }
+    }
+
+    func onNextCreateTaskStream(task: TaskFields) {
+        createTaskSubject.onNext(task)
+    }
+
+    func onNextUpdateTaskStream(task: TaskFields) {
+        updateTaskSubject.onNext(task)
     }
 }
