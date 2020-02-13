@@ -16,10 +16,10 @@ final class TaskViewController: UIViewController, StoryboardInstantiate {
 
     var disposeBag = DisposeBag()
 
-    @IBOutlet private weak var titleTextFIeld: UITextField!
+    @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var dueTextView: UITextView!
     @IBOutlet private weak var completedButton: UIButton!
-    @IBOutlet private weak var notesTextField: UITextView!
+    @IBOutlet private weak var notesTextView: UITextView!
     @IBOutlet private var inputDatePicker: UIDatePicker!
 
     override func viewDidLoad() {
@@ -35,6 +35,43 @@ final class TaskViewController: UIViewController, StoryboardInstantiate {
 extension TaskViewController: StoryboardView {
     func bind(reactor: TaskViewReactor) {
 
+        titleTextField.rx.text
+            .distinctUntilChanged()
+            .filterNil()
+            .map(Reactor.Action.setTitle)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+        notesTextView.rx.text
+            .distinctUntilChanged()
+            .filterNil()
+            .map(Reactor.Action.setNotes)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+        completedButton.rx.tap
+            .map {[weak self] _ in self?.completedButton.isSelected }
+            .filterNil()
+            .map { !$0 }
+            .map(Reactor.Action.setCompleted)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+        inputDatePicker.rx.date
+            .map(Reactor.Action.setDue)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+        reactor.state.map { $0.task }
+            .distinctUntilChanged()
+            .subscribe(onNext: {[weak self] task in
+                self?.titleTextField.text = task.title
+                self?.notesTextView.text = task.notes
+                self?.completedButton.isSelected = task.completed
+                if let dueString = task.due {
+                    self?.dueTextView.text = String(dueString.prefix(dueString.count - 14))
+                }
+            }).disposed(by: disposeBag)
     }
 }
 

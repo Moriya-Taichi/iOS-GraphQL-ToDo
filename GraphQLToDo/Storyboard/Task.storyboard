@@ -175,8 +175,8 @@
                         <outlet property="completedButton" destination="CCh-kB-3qf" id="Qqt-sY-YuK"/>
                         <outlet property="dueTextView" destination="Htc-4h-V3C" id="v9s-YA-4qm"/>
                         <outlet property="inputDatePicker" destination="Ky1-vz-kpH" id="xyO-xP-D90"/>
-                        <outlet property="notesTextField" destination="5Zj-wt-P7F" id="Dld-q7-f8i"/>
-                        <outlet property="titleTextFIeld" destination="swG-q1-fsS" id="gkO-ag-8qe"/>
+                        <outlet property="notesTextView" destination="5Zj-wt-P7F" id="Dld-q7-f8i"/>
+                        <outlet property="titleTextField" destination="swG-q1-fsS" id="gkO-ag-8qe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFj-Ob-uqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
