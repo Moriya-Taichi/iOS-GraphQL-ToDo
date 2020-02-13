@@ -170,7 +170,7 @@
                         <outlet property="createTaskButton" destination="BbS-GH-Rm2" id="Jfb-eD-xAo"/>
                         <outlet property="dueTextView" destination="1V2-O1-gdC" id="fiX-U7-GBA"/>
                         <outlet property="inputDatePicker" destination="aBU-CZ-KSf" id="37K-nq-FgG"/>
-                        <outlet property="noteTextView" destination="7tc-dn-RwB" id="1Sq-p0-sSL"/>
+                        <outlet property="notesTextView" destination="7tc-dn-RwB" id="1Sq-p0-sSL"/>
                         <outlet property="titleTextField" destination="a26-oD-hWA" id="6cp-v1-n4E"/>
                     </connections>
                 </viewController>

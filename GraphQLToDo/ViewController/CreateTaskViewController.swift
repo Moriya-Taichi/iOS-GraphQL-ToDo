@@ -45,7 +45,7 @@ final class CreateTaskViewController: UIViewController, StoryboardInstantiate {
                                      for: .normal)
         }
     }
-    @IBOutlet private weak var noteTextView: UITextView!
+    @IBOutlet private weak var notesTextView: UITextView!
 
     @IBOutlet private weak var contentView: UIView! {
         didSet {
@@ -100,7 +100,7 @@ extension CreateTaskViewController: StoryboardView {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
 
-        noteTextView.rx.text
+        notesTextView.rx.text
             .distinctUntilChanged()
             .filterNil()
             .map(Reactor.Action.setNotes)
