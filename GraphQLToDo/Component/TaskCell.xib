@@ -55,7 +55,7 @@
             <connections>
                 <outlet property="checkCompletedButton" destination="EBc-fc-FP3" id="aeK-Fu-mza"/>
                 <outlet property="dateLabel" destination="tKy-pV-XU6" id="BI8-wF-zGM"/>
-                <outlet property="noteLabel" destination="Bfm-lg-lhl" id="Q7k-Z0-muA"/>
+                <outlet property="notes" destination="Bfm-lg-lhl" id="Q7k-Z0-muA"/>
                 <outlet property="titleLabel" destination="gxu-ar-GCB" id="tQr-4P-LVn"/>
             </connections>
             <point key="canvasLocation" x="176.81159420289856" y="13.058035714285714"/>
