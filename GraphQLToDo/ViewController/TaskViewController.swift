@@ -35,6 +35,11 @@ final class TaskViewController: UIViewController, StoryboardInstantiate {
 extension TaskViewController: StoryboardView {
     func bind(reactor: TaskViewReactor) {
 
+        rx.viewWillDisApper
+            .map { _ in Reactor.Action.updateTask }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
         titleTextField.rx.text
             .distinctUntilChanged()
             .filterNil()
