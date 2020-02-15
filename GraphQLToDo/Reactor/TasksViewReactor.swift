@@ -56,7 +56,8 @@ final class TasksViewReactor: Reactor {
     func transform(action: Observable<Action>) -> Observable<Action> {
         return .merge(
             action,
-            taskService.createTaskStream.map { _ in .load }
+            taskService.createTaskStream.map { _ in .load },
+            taskService.updateTaskStream.map { .updateTask($0) }
         )
     }
 

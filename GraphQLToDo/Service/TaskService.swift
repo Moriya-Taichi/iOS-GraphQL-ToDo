@@ -12,6 +12,7 @@ import RxSwift
 protocol TaskServiceType {
 
     var createTaskStream: Observable<TaskFields> { get }
+    var updateTaskStream: Observable<TaskFields> { get }
 
     func fetchTasks(
         completed: Bool?,
