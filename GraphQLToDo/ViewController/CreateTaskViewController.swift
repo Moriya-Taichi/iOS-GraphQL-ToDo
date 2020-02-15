@@ -45,7 +45,7 @@ final class CreateTaskViewController: UIViewController, StoryboardInstantiate {
                                      for: .normal)
         }
     }
-    @IBOutlet private weak var noteTextView: UITextView!
+    @IBOutlet private weak var notesTextView: UITextView!
 
     @IBOutlet private weak var contentView: UIView! {
         didSet {
@@ -100,7 +100,7 @@ extension CreateTaskViewController: StoryboardView {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
 
-        noteTextView.rx.text
+        notesTextView.rx.text
             .distinctUntilChanged()
             .filterNil()
             .map(Reactor.Action.setNotes)
@@ -111,19 +111,11 @@ extension CreateTaskViewController: StoryboardView {
             .map {[weak self] _ in self?.completedButton.isSelected }
             .filterNil()
             .map { !$0 }
-            .do(onNext: {[weak self] in
-                self?.completedButton.isSelected = $0
-            })
             .map(Reactor.Action.setIsCompleted)
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
 
         inputDatePicker.rx.date
-            .do(onNext: {[weak self] in
-                let dateString = DateFormatters.rfc3339.string(from: $0)
-                let shortString = String(dateString.prefix(dateString.count - 14))
-                self?.dueTextView.text = shortString
-            })
             .map(Reactor.Action.setDue)
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
@@ -146,6 +138,22 @@ extension CreateTaskViewController: StoryboardView {
             .distinctUntilChanged()
             .bind(to: createTaskButton.rx.isEnabled)
             .disposed(by: disposeBag)
+
+        reactor.state.map { $0.isCompleted }
+            .distinctUntilChanged()
+            .filterNil()
+            .subscribe(onNext: { [weak self] in
+                self?.completedButton.isSelected = $0
+            }).disposed(by: disposeBag)
+
+        reactor.state.map { $0.due }
+            .distinctUntilChanged()
+            .filterNil()
+            .subscribe(onNext: {[weak self] in
+                let dateString = DateFormatters.rfc3339.string(from: $0)
+                let shortString = String(dateString.prefix(dateString.count - 14))
+                self?.dueTextView.text = shortString
+            }).disposed(by: disposeBag)
     }
 }
 

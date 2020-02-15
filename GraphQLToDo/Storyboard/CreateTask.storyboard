@@ -25,7 +25,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0a7-kh-hVI" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="493"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a26-oD-hWA">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a26-oD-hWA">
                                                 <rect key="frame" x="103" y="23" width="172" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="WM7-kJ-voo"/>
@@ -170,7 +170,7 @@
                         <outlet property="createTaskButton" destination="BbS-GH-Rm2" id="Jfb-eD-xAo"/>
                         <outlet property="dueTextView" destination="1V2-O1-gdC" id="fiX-U7-GBA"/>
                         <outlet property="inputDatePicker" destination="aBU-CZ-KSf" id="37K-nq-FgG"/>
-                        <outlet property="noteTextView" destination="7tc-dn-RwB" id="1Sq-p0-sSL"/>
+                        <outlet property="notesTextView" destination="7tc-dn-RwB" id="1Sq-p0-sSL"/>
                         <outlet property="titleTextField" destination="a26-oD-hWA" id="6cp-v1-n4E"/>
                     </connections>
                 </viewController>

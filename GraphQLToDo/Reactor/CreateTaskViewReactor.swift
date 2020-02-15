@@ -65,6 +65,9 @@ final class CreateTaskViewReactor: Reactor {
                                                    notes: state.notes,
                                                    completed: state.isCompleted,
                                                    due: due)
+                .do(onNext: {[weak self] task in
+                    self?.taskService.onNextCreateTaskStream(task: task)
+                })
                 .map { _ in true }
                 .map(Mutation.setIsCreated)
             return isCreated

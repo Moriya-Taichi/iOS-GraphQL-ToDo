@@ -21,7 +21,7 @@ final class TaskCell: UITableViewCell {
         }
     }
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var noteLabel: UILabel!
+    @IBOutlet private weak var notes: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
 
     required init?(coder: NSCoder) {
@@ -31,7 +31,7 @@ final class TaskCell: UITableViewCell {
     private func setCellContents(task: TaskFields)  {
         self.checkCompletedButton.isSelected = task.completed
         self.titleLabel.text = task.title
-        self.noteLabel.text = task.notes
+        self.notes.text = task.notes
         self.dateLabel.text = task.due
     }
 }
