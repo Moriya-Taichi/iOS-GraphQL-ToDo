@@ -6,7 +6,6 @@
 //  Copyright © 2020 Mori. All rights reserved.
 //
 
-
 import RxDataSources
 import ReactorKit
 import RxSwift
@@ -36,7 +35,9 @@ final class TasksViewController: UIViewController, StoryboardInstantiate {
     @IBOutlet private weak var createTaskButton: UIButton! {
         didSet {
             createTaskButton.layer.cornerRadius = createTaskButton.frame.width / 2
-            createTaskButton.backgroundColor = .systemYellow
+            createTaskButton.setImage(#imageLiteral(resourceName: "CreateTaskImage").withRenderingMode(.alwaysTemplate), for: .normal)
+            createTaskButton.tintColor = .white
+            createTaskButton.backgroundColor = .systemPink
         }
     }
     override func viewDidLoad() {
@@ -102,5 +103,13 @@ extension TasksViewController: StoryboardView {
             .map { _ in Reactor.Action.load }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
+
+        reactor.state.map { $0.isLoading }
+            .distinctUntilChanged()
+            .filter { !$0 }
+            .subscribe(onNext: {[weak self] _ in
+                self?.refleshControl.endRefreshing()
+            }).disposed(by: disposeBag)
+
     }
 }
