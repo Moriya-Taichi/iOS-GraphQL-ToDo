@@ -116,6 +116,7 @@ extension CreateTaskViewController: StoryboardView {
             .disposed(by: disposeBag)
 
         inputDatePicker.rx.date
+            .skip(1)
             .map(Reactor.Action.setDue)
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
