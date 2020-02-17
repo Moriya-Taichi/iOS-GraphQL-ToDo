@@ -79,7 +79,7 @@ final class TaskViewReactor: Reactor {
         case let .setTitle(title):
             return .just(.updateTitle(title))
         case let .setDue(due):
-            let dueString = DateFormatters.rfc3339.string(from: due)
+            let dueString = ISO8601DateFormatter().string(from: due)
             return .just(.updateDue(dueString))
         case let .setCompleted(completed):
             return .just(.updateCompleted(completed))
