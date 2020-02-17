@@ -75,6 +75,11 @@ extension TasksViewController: StoryboardView {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
 
+        tasksTableView.rx.isReachedBottom
+            .map { _ in Reactor.Action.paginate }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
 
         let dataSource = RxTableViewSectionedAnimatedDataSource<CellItemSection>(
             animationConfiguration: AnimationConfiguration(insertAnimation: .fade,
