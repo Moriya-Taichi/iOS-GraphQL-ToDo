@@ -59,6 +59,7 @@
 		8D41E94323ED537500686C59 /* TaskCellRector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E94223ED537500686C59 /* TaskCellRector.swift */; };
 		8D41E94623F04B5E00686C59 /* DataFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D41E94523F04B5E00686C59 /* DataFormatters.swift */; };
 		8DC06DC123F87A2700DE0B26 /* UIViewControllerLifecycle+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC06DC023F87A2700DE0B26 /* UIViewControllerLifecycle+Rx.swift */; };
+		8DD25CD723F9410E006EC880 /* Common.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8DD25CD623F9410E006EC880 /* Common.graphql */; };
 		8DE7401723F1572F00EAB8E0 /* UIScrolView+TouchBegan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE7401623F1572F00EAB8E0 /* UIScrolView+TouchBegan.swift */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +143,7 @@
 		8D41E94223ED537500686C59 /* TaskCellRector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellRector.swift; sourceTree = "<group>"; };
 		8D41E94523F04B5E00686C59 /* DataFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatters.swift; sourceTree = "<group>"; };
 		8DC06DC023F87A2700DE0B26 /* UIViewControllerLifecycle+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllerLifecycle+Rx.swift"; sourceTree = "<group>"; };
+		8DD25CD623F9410E006EC880 /* Common.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Common.graphql; sourceTree = "<group>"; };
 		8DE7401623F1572F00EAB8E0 /* UIScrolView+TouchBegan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrolView+TouchBegan.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -325,6 +327,7 @@
 		8D352BAA23DF4E5100FD01F2 /* Schema */ = {
 			isa = PBXGroup;
 			children = (
+				8DD25CD623F9410E006EC880 /* Common.graphql */,
 				8D352BB023E1FBA000FD01F2 /* Task.graphql */,
 			);
 			path = Schema;
@@ -530,6 +533,7 @@
 				8D352BB123E1FBA000FD01F2 /* Task.graphql in Resources */,
 				8D41E91C23E7372000686C59 /* Task.storyboard in Resources */,
 				8D352B5123DF1C9000FD01F2 /* LaunchScreen.storyboard in Resources */,
+				8DD25CD723F9410E006EC880 /* Common.graphql in Resources */,
 				8D352B4E23DF1C9000FD01F2 /* Assets.xcassets in Resources */,
 				8D41E91A23E7371500686C59 /* Tasks.storyboard in Resources */,
 				8D41E91E23E7372D00686C59 /* CreateTask.storyboard in Resources */,
