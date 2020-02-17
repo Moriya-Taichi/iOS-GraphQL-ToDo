@@ -68,7 +68,7 @@ final class TasksViewReactor: Reactor {
             let startLoading: Observable<Mutation> = .just(.setIsLoading(true))
             let tasks = taskService.fetchTasks(completed: state.isCompleted,
                                                order: state.taskOrder,
-                                               endSursor: "",
+                                               endCursor: "",
                                                hasNext: false)
                 .map { page in
                     let cellItem = page.pageElements.map { CellItem.task(
@@ -90,7 +90,7 @@ final class TasksViewReactor: Reactor {
             let startLoading: Observable<Mutation> = .just(.setIsLoading(true))
             let nextPage = taskService.fetchTasks(completed: state.isCompleted,
                                                   order: state.taskOrder,
-                                                  endSursor: state.tasks.endCursor,
+                                                  endCursor: state.tasks.endCursor,
                                                   hasNext: state.tasks.hasNextPage)
                 .map { page in
                     let cellItem = page.pageElements.map { CellItem.task(

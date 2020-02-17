@@ -60,7 +60,7 @@ final class CreateTaskViewReactor: Reactor {
         switch action {
         case .createTask:
             guard state.isCreatable else { return .empty() }
-            let due = state.due == nil ? nil : DateFormatters.rfc3339.string(from: state.due!)
+            let due = state.due == nil ? nil : ISO8601DateFormatter().string(from: state.due!)
             let isCreated = taskService.createTask(title: state.title,
                                                    notes: state.notes,
                                                    completed: state.isCompleted,
@@ -81,7 +81,7 @@ final class CreateTaskViewReactor: Reactor {
             return .just(.setDue(due))
         }
     }
-
+    
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         switch mutation {

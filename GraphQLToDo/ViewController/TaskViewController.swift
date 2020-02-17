@@ -35,6 +35,11 @@ final class TaskViewController: UIViewController, StoryboardInstantiate {
 extension TaskViewController: StoryboardView {
     func bind(reactor: TaskViewReactor) {
 
+        Observable<Void>.just(())
+            .map { _ in Reactor.Action.load }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
         rx.viewWillDisApper
             .map { _ in Reactor.Action.updateTask }
             .bind(to: reactor.action)
@@ -63,6 +68,7 @@ extension TaskViewController: StoryboardView {
             .disposed(by: disposeBag)
 
         inputDatePicker.rx.date
+            .skip(1)
             .map(Reactor.Action.setDue)
             .bind(to: reactor.action)
             .disposed(by: disposeBag)

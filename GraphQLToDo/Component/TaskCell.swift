@@ -16,8 +16,8 @@ final class TaskCell: UITableViewCell {
 
     @IBOutlet private weak var checkCompletedButton: UIButton! {
         didSet {
-            checkCompletedButton.setImage(nil, for: .normal)
-            checkCompletedButton.setImage(nil, for: .selected)
+            checkCompletedButton.setImage(#imageLiteral(resourceName: "CheckImage").withRenderingMode(.alwaysOriginal), for: .normal)
+            checkCompletedButton.setImage(#imageLiteral(resourceName: "CheckedImage").withRenderingMode(.alwaysOriginal), for: .selected)
         }
     }
     @IBOutlet private weak var titleLabel: UILabel!

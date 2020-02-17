@@ -13,10 +13,3 @@ protocol GraphQLApiType: ApiType {
     var client: ApolloClient { get }
     var rx: ReactiveGQLApiType { get }
 }
-
-extension GraphQLApiType {
-    var client: ApolloClient {
-        let networkTransport = HTTPNetworkTransport(url: baseURL)
-        return ApolloClient(networkTransport: networkTransport)
-    }
-}
