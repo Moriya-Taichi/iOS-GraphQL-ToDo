@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Apollo
 
 final class GraphQLApiProvider: GraphQLApiType {
 
@@ -19,6 +20,13 @@ final class GraphQLApiProvider: GraphQLApiType {
         }
         return apiURL
     }
+
+    lazy var client: ApolloClient = {
+        let networkTransport = HTTPNetworkTransport(url: baseURL)
+        let client = ApolloClient(networkTransport: networkTransport)
+        client.cacheKeyForObject = { $0["id"] }
+        return client
+    }()
 
     var header: [String : String] {
         var header: [String: String] = [:]
