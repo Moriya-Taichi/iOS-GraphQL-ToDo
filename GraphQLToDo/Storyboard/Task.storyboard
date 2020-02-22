@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rDZ-4C-Ygb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rDZ-4C-Ygb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,26 +22,26 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCe-48-9oB" userLabel="Due Placeholder Label">
-                                                <rect key="frame" x="5" y="121" width="404" height="35"/>
+                                                <rect key="frame" x="10" y="121" width="399" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zU-lB-AHD" userLabel="Notes Placeholder Label">
-                                                <rect key="frame" x="15" y="330" width="394" height="21"/>
+                                                <rect key="frame" x="20" y="330" width="389" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Zj-wt-P7F" userLabel="Notes Text View">
-                                                <rect key="frame" x="5" y="320" width="404" height="409"/>
+                                                <rect key="frame" x="10" y="320" width="399" height="409"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Htc-4h-V3C" userLabel="Due Text View">
-                                                <rect key="frame" x="5" y="121" width="404" height="35"/>
+                                                <rect key="frame" x="10" y="121" width="399" height="35"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="Gjr-zY-H2O"/>
@@ -103,7 +103,7 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swG-q1-fsS">
-                                                <rect key="frame" x="5" y="40" width="404" height="35"/>
+                                                <rect key="frame" x="10" y="40" width="399" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="CMK-QC-86J"/>
                                                 </constraints>
@@ -141,13 +141,13 @@
                                             <constraint firstAttribute="trailing" secondItem="e00-h8-Nlx" secondAttribute="trailing" constant="25" id="fUo-G6-Ib3"/>
                                             <constraint firstAttribute="trailing" secondItem="swG-q1-fsS" secondAttribute="trailing" constant="5" id="iA0-Dg-VxZ"/>
                                             <constraint firstItem="RWs-8w-CcP" firstAttribute="top" secondItem="e00-h8-Nlx" secondAttribute="bottom" constant="15" id="iXB-oi-J6h"/>
-                                            <constraint firstItem="swG-q1-fsS" firstAttribute="leading" secondItem="RXl-RC-7ia" secondAttribute="leading" constant="5" id="iwZ-hs-lby"/>
+                                            <constraint firstItem="swG-q1-fsS" firstAttribute="leading" secondItem="RXl-RC-7ia" secondAttribute="leading" constant="10" id="iwZ-hs-lby"/>
                                             <constraint firstItem="CCh-kB-3qf" firstAttribute="top" secondItem="4IR-cu-qAW" secondAttribute="bottom" constant="10" id="nXW-GD-dKT"/>
                                             <constraint firstItem="iRp-rO-ZtQ" firstAttribute="leading" secondItem="zCB-nr-FRS" secondAttribute="leading" id="oYJ-wk-aGU"/>
                                             <constraint firstItem="FCe-48-9oB" firstAttribute="bottom" secondItem="Htc-4h-V3C" secondAttribute="bottom" id="tv8-9F-ihD"/>
-                                            <constraint firstItem="5Zj-wt-P7F" firstAttribute="leading" secondItem="RXl-RC-7ia" secondAttribute="leading" constant="5" id="ubX-2f-tfZ"/>
+                                            <constraint firstItem="5Zj-wt-P7F" firstAttribute="leading" secondItem="RXl-RC-7ia" secondAttribute="leading" constant="10" id="ubX-2f-tfZ"/>
                                             <constraint firstItem="FCe-48-9oB" firstAttribute="trailing" secondItem="Htc-4h-V3C" secondAttribute="trailing" id="ySZ-fo-fW1"/>
-                                            <constraint firstItem="Htc-4h-V3C" firstAttribute="leading" secondItem="RXl-RC-7ia" secondAttribute="leading" constant="5" id="yqa-TG-kJC"/>
+                                            <constraint firstItem="Htc-4h-V3C" firstAttribute="leading" secondItem="RXl-RC-7ia" secondAttribute="leading" constant="10" id="yqa-TG-kJC"/>
                                             <constraint firstItem="Htc-4h-V3C" firstAttribute="top" secondItem="RWs-8w-CcP" secondAttribute="bottom" constant="10" id="ze0-cM-BFB"/>
                                         </constraints>
                                     </view>
@@ -173,8 +173,10 @@
                     </view>
                     <connections>
                         <outlet property="completedButton" destination="CCh-kB-3qf" id="Qqt-sY-YuK"/>
+                        <outlet property="duePlaceholderLabel" destination="FCe-48-9oB" id="7cy-J9-jmT"/>
                         <outlet property="dueTextView" destination="Htc-4h-V3C" id="v9s-YA-4qm"/>
                         <outlet property="inputDatePicker" destination="Ky1-vz-kpH" id="xyO-xP-D90"/>
+                        <outlet property="notesPlaceholderLabel" destination="1zU-lB-AHD" id="j1B-9Y-rK8"/>
                         <outlet property="notesTextView" destination="5Zj-wt-P7F" id="Dld-q7-f8i"/>
                         <outlet property="titleTextField" destination="swG-q1-fsS" id="gkO-ag-8qe"/>
                     </connections>
