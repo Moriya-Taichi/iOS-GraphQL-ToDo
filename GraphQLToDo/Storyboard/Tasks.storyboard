@@ -29,11 +29,11 @@
                                 <state key="normal" image="CreateTaskImage"/>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQx-DY-d6c" userLabel="Menu Button">
-                                <rect key="frame" x="339" y="722" width="35" height="35"/>
+                                <rect key="frame" x="336.5" y="717" width="40" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BQx-DY-d6c" secondAttribute="height" multiplier="1:1" id="iUz-CN-emj"/>
-                                    <constraint firstAttribute="width" constant="35" id="w90-0s-7M0"/>
+                                    <constraint firstAttribute="width" constant="40" id="w90-0s-7M0"/>
                                 </constraints>
                             </button>
                         </subviews>

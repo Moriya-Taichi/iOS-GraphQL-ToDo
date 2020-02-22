@@ -40,7 +40,14 @@ final class TasksViewController: UIViewController, StoryboardInstantiate {
             createTaskButton.backgroundColor = .systemPink
         }
     }
-    @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet private weak var menuButton: UIButton! {
+        didSet {
+            menuButton.layer.cornerRadius = menuButton.frame.width / 2
+            menuButton.setImage(#imageLiteral(resourceName: "MenuImage").withRenderingMode(.alwaysTemplate), for: .normal)
+            menuButton.tintColor = .white
+            menuButton.backgroundColor = .systemPink
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
