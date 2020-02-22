@@ -40,6 +40,18 @@ final class TaskViewReactor: Reactor {
 
     struct State {
         var task: TaskFields
+
+        var dueSteing: String? {
+            if let dateString = task.due,
+                let date = ISO8601DateFormatter().date(from: dateString){
+                return ISO8601DateFormatter.string(from: date, timeZone: .current, formatOptions: [.withFullDate,
+                                                                                                   .withTime,
+                                                                                                   .withDashSeparatorInDate,
+                                                                                                   .withColonSeparatorInTime,
+                                                                                                   .withSpaceBetweenDateAndTime])
+            }
+            return nil
+        }
     }
 
     init(identifier: String,

@@ -22,6 +22,8 @@ final class TaskViewController: UIViewController, StoryboardInstantiate {
     @IBOutlet private weak var notesTextView: UITextView!
     @IBOutlet private var inputDatePicker: UIDatePicker!
 
+    @IBOutlet private weak var duePlaceholderLabel: UILabel!
+    @IBOutlet private weak var notesPlaceholderLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -79,9 +81,17 @@ extension TaskViewController: StoryboardView {
                 self?.titleTextField.text = task.title
                 self?.notesTextView.text = task.notes
                 self?.completedButton.isSelected = task.completed
-                if let dueString = task.due {
-                    self?.dueTextView.text = String(dueString.prefix(dueString.count - 14))
-                }
+
+                self?.notesPlaceholderLabel.isHidden = !task.notes.isEmpty
+
+            }).disposed(by: disposeBag)
+
+        reactor.state.map { $0.dueSteing }
+            .debug()
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] in
+                self?.dueTextView.text = $0
+                self?.duePlaceholderLabel.isHidden = !($0?.isEmpty ?? true)
             }).disposed(by: disposeBag)
     }
 }
