@@ -7,6 +7,7 @@
 //
 
 import ReactorKit
+import Foundation
 import RxSwift
 
 final class TaskCellReactor: Reactor {
@@ -24,6 +25,18 @@ final class TaskCellReactor: Reactor {
 
     struct State {
         var task: TaskFields
+
+        var dueString: String? {
+            if let dateString = task.due,
+                let date = ISO8601DateFormatter().date(from: dateString) {
+                return ISO8601DateFormatter.string(from: date, timeZone: .current, formatOptions: [.withFullDate,
+                                                                                                   .withTime,
+                                                                                                   .withDashSeparatorInDate,
+                                                                                                   .withColonSeparatorInTime,
+                                                                                                   .withSpaceBetweenDateAndTime])
+            }
+            return nil
+        }
     }
 
     var identifier: String {
@@ -39,15 +52,15 @@ final class TaskCellReactor: Reactor {
         switch action {
         case .complete:
             let updateTask = taskService.updateTask(taskIdentifier: currentState.task.id,
-                                                         title: nil,
-                                                         notes: nil,
-                                                         completed: !currentState.task.completed,
-                                                         due: nil)
+                                                    title: nil,
+                                                    notes: nil,
+                                                    completed: !currentState.task.completed,
+                                                    due: nil)
                 .map(Mutation.setTask)
             return updateTask
         }
     }
-
+    
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         switch mutation {
