@@ -28,11 +28,21 @@
                                 </constraints>
                                 <state key="normal" image="CreateTaskImage"/>
                             </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQx-DY-d6c" userLabel="Menu Button">
+                                <rect key="frame" x="339" y="722" width="35" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BQx-DY-d6c" secondAttribute="height" multiplier="1:1" id="iUz-CN-emj"/>
+                                    <constraint firstAttribute="width" constant="35" id="w90-0s-7M0"/>
+                                </constraints>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="gpj-UK-q3L" secondAttribute="bottom" id="3ca-45-4It"/>
+                            <constraint firstItem="8hu-D3-bkU" firstAttribute="top" secondItem="BQx-DY-d6c" secondAttribute="bottom" constant="15" id="B3t-CT-ckQ"/>
                             <constraint firstItem="kah-aA-Plb" firstAttribute="bottom" secondItem="8hu-D3-bkU" secondAttribute="bottom" constant="25" id="QP5-uX-WTp"/>
+                            <constraint firstItem="BQx-DY-d6c" firstAttribute="centerX" secondItem="8hu-D3-bkU" secondAttribute="centerX" id="Ytt-ep-dTD"/>
                             <constraint firstItem="kah-aA-Plb" firstAttribute="trailing" secondItem="gpj-UK-q3L" secondAttribute="trailing" id="gKN-Jf-WkS"/>
                             <constraint firstAttribute="trailing" secondItem="8hu-D3-bkU" secondAttribute="trailing" constant="25" id="lLh-AO-j0u"/>
                             <constraint firstItem="gpj-UK-q3L" firstAttribute="top" secondItem="kah-aA-Plb" secondAttribute="top" id="o4Y-ft-TL5"/>
@@ -42,6 +52,7 @@
                     </view>
                     <connections>
                         <outlet property="createTaskButton" destination="8hu-D3-bkU" id="ovd-y6-taa"/>
+                        <outlet property="menuButton" destination="BQx-DY-d6c" id="Xgg-eZ-3iU"/>
                         <outlet property="tasksTableView" destination="gpj-UK-q3L" id="i0q-K4-0cl"/>
                     </connections>
                 </viewController>

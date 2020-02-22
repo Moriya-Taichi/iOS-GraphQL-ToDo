@@ -40,6 +40,8 @@ final class TasksViewController: UIViewController, StoryboardInstantiate {
             createTaskButton.backgroundColor = .systemPink
         }
     }
+    @IBOutlet weak var menuButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         SetupRx()
