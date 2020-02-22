@@ -32,7 +32,6 @@ final class TaskCell: UITableViewCell {
         self.checkCompletedButton.isSelected = task.completed
         self.titleLabel.text = task.title
         self.notes.text = task.notes
-        self.dateLabel.text = task.due
     }
 }
 
@@ -45,6 +44,12 @@ extension TaskCell: StoryboardView {
                 self?.setCellContents(task: task)
             })
             .disposed(by: disposeBag)
+
+        reactor.state.map { $0.dueString }
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] in
+                self?.dateLabel.text = $0
+            }).disposed(by: disposeBag)
 
         checkCompletedButton.rx
             .tap
