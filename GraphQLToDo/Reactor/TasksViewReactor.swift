@@ -9,6 +9,12 @@
 import ReactorKit
 import RxSwift
 
+enum CompletedSelect: String, CaseIterable {
+    case all
+    case completed
+    case notCompleted
+}
+
 final class TasksViewReactor: Reactor {
 
     var initialState: State
@@ -17,12 +23,15 @@ final class TasksViewReactor: Reactor {
 
     enum Action {
         case load
+        case reload
+        case loadTask(reload: Bool)
         case paginate
         case updateTask(TaskFields)
+        case selectCompletedAndOrder(Int, Int)
     }
 
     enum Mutation {
-        case setIsCompleted(Bool)
+        case setIsCompleted(Bool?)
         case setIsLoading(Bool)
         case setTaskOrder(TaskOrderFields)
         case setTasks(Pagination<CellItem>)
@@ -38,6 +47,12 @@ final class TasksViewReactor: Reactor {
 
         var taskCellItemSection: CellItemSection {
             return CellItemSection.init(model: .task, items: tasks.pageElements)
+        }
+
+        var menuOrderOptions: [[String]] {
+            let taskOrders = TaskOrderFields.allCases.compactMap { $0.rawValue }
+            let completedSelects = CompletedSelect.allCases.compactMap { $0.rawValue }
+            return [taskOrders, completedSelects]
         }
     }
 
@@ -56,7 +71,7 @@ final class TasksViewReactor: Reactor {
     func transform(action: Observable<Action>) -> Observable<Action> {
         return .merge(
             action,
-            taskService.createTaskStream.map { _ in .load },
+            taskService.createTaskStream.map { _ in .reload },
             taskService.updateTaskStream.map { .updateTask($0) }
         )
     }
@@ -65,11 +80,18 @@ final class TasksViewReactor: Reactor {
         let state = currentState
         switch action {
         case .load:
+            self.load()
+            return .empty()
+        case .reload:
+            self.reload()
+            return .empty()
+        case let .loadTask(reload):
             let startLoading: Observable<Mutation> = .just(.setIsLoading(true))
             let tasks = taskService.fetchTasks(completed: state.isCompleted,
                                                order: state.taskOrder,
                                                endCursor: "",
-                                               hasNext: false)
+                                               hasNext: false,
+                                               refetch: reload)
                 .map { page in
                     let cellItem = page.pageElements.map { CellItem.task(
                         TaskCellReactor(taskService: self.taskService, task: $0)
@@ -91,7 +113,8 @@ final class TasksViewReactor: Reactor {
             let nextPage = taskService.fetchTasks(completed: state.isCompleted,
                                                   order: state.taskOrder,
                                                   endCursor: state.tasks.endCursor,
-                                                  hasNext: state.tasks.hasNextPage)
+                                                  hasNext: state.tasks.hasNextPage,
+                                                  refetch: false)
                 .map { page in
                     let cellItem = page.pageElements.map { CellItem.task(
                         TaskCellReactor(taskService: self.taskService, task: $0)
@@ -111,6 +134,21 @@ final class TasksViewReactor: Reactor {
                 let index = state.tasks.pageElements.firstIndex(of: cellItem)
                 else { return .empty() }
             return .just(.updateTask(cellItem, index))
+        case let .selectCompletedAndOrder(row, component):
+            switch state.menuOrderOptions[component][row] {
+            case TaskOrderFields.latest.rawValue:
+                return .just(.setTaskOrder(.latest))
+            case TaskOrderFields.due.rawValue:
+                return .just(.setTaskOrder(.due))
+            case CompletedSelect.all.rawValue:
+                return .just(.setIsCompleted(nil))
+            case CompletedSelect.completed.rawValue:
+                return .just(.setIsCompleted(true))
+            case CompletedSelect.notCompleted.rawValue:
+                return .just(.setIsCompleted(false))
+            default:
+                return .empty()
+            }
         }
     }
 
@@ -131,5 +169,15 @@ final class TasksViewReactor: Reactor {
             newState.tasks.pageElements[index] = task
         }
         return newState
+    }
+}
+
+extension TasksViewReactor {
+    private func load() {
+        self.action.onNext(.loadTask(reload: false))
+    }
+
+    private func reload() {
+        self.action.onNext(.loadTask(reload: true))
     }
 }
