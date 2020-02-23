@@ -183,5 +183,27 @@ extension TasksViewController: StoryboardView {
             .subscribe(onNext: {[weak self] _ in
                 self?.refleshControl.endRefreshing()
             }).disposed(by: disposeBag)
+
+        reactor.state.map { $0.menuOrderOptions }
+            .bind(to: menuPickerView.rx.items(adapter: pickerViewAdapter))
+            .disposed(by: disposeBag)
+
+        menuPickerView.rx.itemSelected
+            .map(Reactor.Action.selectCompletedAndOrder)
+            .debug()
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+        reactor.state.map { $0.taskOrder }
+            .distinctUntilChanged()
+            .map { _ in Reactor.Action.load }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+        reactor.state.map { $0.isCompleted }
+            .distinctUntilChanged()
+            .map { _ in Reactor.Action.load }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
     }
 }
