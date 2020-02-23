@@ -18,7 +18,8 @@ protocol TaskServiceType {
         completed: Bool?,
         order: TaskOrderFields,
         endCursor: String,
-        hasNext: Bool
+        hasNext: Bool,
+        refetch: Bool
     )
         -> Observable<Pagination<TaskFields>>
 
@@ -63,15 +64,17 @@ final class TaskService: TaskServiceType {
         completed: Bool? = nil,
         order: TaskOrderFields,
         endCursor: String,
-        hasNext: Bool
+        hasNext: Bool,
+        refetch: Bool
     )
         -> Observable<Pagination<TaskFields>>
     {
-        let page = endCursor.isEmpty ? PaginationInput(first: 20) : PaginationInput(first: 10,
+        let page = endCursor.isEmpty ? PaginationInput(first: 13) : PaginationInput(first: 1,
                                                                                     after: endCursor)
         return repository.fetchTasks(input: TasksInput(completed: completed),
                                      orderBy: order,
-                                     page: page)
+                                     page: page,
+                                     refetch: refetch)
             .asObservable()
             .map { $0.tasks }
             .map { response in
