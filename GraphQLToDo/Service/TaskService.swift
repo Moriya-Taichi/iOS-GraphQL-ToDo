@@ -69,7 +69,7 @@ final class TaskService: TaskServiceType {
     )
         -> Observable<Pagination<TaskFields>>
     {
-        let page = endCursor.isEmpty ? PaginationInput(first: 13) : PaginationInput(first: 1,
+        let page = endCursor.isEmpty ? PaginationInput(first: 20) : PaginationInput(first: 10,
                                                                                     after: endCursor)
         return repository.fetchTasks(input: TasksInput(completed: completed),
                                      orderBy: order,
