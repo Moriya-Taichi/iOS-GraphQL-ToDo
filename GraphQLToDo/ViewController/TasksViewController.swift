@@ -12,19 +12,19 @@ import RxSwift
 import UIKit
 
 final class TasksViewController: UIViewController, StoryboardInstantiate {
-
+    
     static var storyboardName: StoryboardName = .tasks
-
+    
     var disposeBag = DisposeBag()
     private let refleshControl = UIRefreshControl()
-
+    
     var callback: Callback?
-
+    
     struct Callback {
         let showTask:((_ identifier: String) -> Void)
         let showCreateTask: (() -> Void)
     }
-
+    
     @IBOutlet weak var tasksTableView: UITableView! {
         didSet {
             tasksTableView.register(UINib(nibName: "TaskCell", bundle: nil),
@@ -48,14 +48,39 @@ final class TasksViewController: UIViewController, StoryboardInstantiate {
             menuButton.backgroundColor = .systemPink
         }
     }
+    private let menuPickerView = UIPickerView()
+    private let pickerToolBar = UIToolbar()
+    private let pickerWithToolBar = UIView()
+    private let toolBarDoneButton = UIBarButtonItem()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SetupRx()
+        setupView()
+        setupRx()
         navigationItem.title = "Tasks"
     }
-
-    private func SetupRx() {
+    
+    private func setupView() {
+        menuPickerView.frame = CGRect(x: 0,
+                                      y: 0,
+                                      width: self.view.frame.width,
+                                      height: self.view.frame.height / 3)
+        pickerWithToolBar.frame = menuPickerView.frame
+        pickerWithToolBar.frame.origin = CGPoint(x: 0,
+                                                 y: self.view.frame.height)
+        pickerToolBar.barStyle = .default
+        pickerToolBar.frame = CGRect(x: 0,
+                                     y: 0,
+                                     width: self.menuPickerView.frame.width,
+                                     height: 40)
+        toolBarDoneButton.title = "Done"
+        pickerToolBar.setItems([toolBarDoneButton], animated: true)
+        pickerWithToolBar.backgroundColor = .white
+        pickerWithToolBar.addSubview(menuPickerView)
+        pickerWithToolBar.addSubview(pickerToolBar)
+    }
+    
+    private func setupRx() {
         guard let reactor = self.reactor else { return }
         tasksTableView.rx.itemSelected
             .filter { $0.row < reactor.currentState.tasks.pageElements.count }
@@ -66,30 +91,57 @@ final class TasksViewController: UIViewController, StoryboardInstantiate {
                     self?.callback?.showTask(task.identifier)
                 }
             }).disposed(by: disposeBag)
-
+        
         createTaskButton.rx.tap
             .throttle(.seconds(1), scheduler: MainScheduler.instance)
             .subscribe(onNext: {[weak self] in
                 self?.callback?.showCreateTask()
             })
             .disposed(by: disposeBag)
+        
+        menuButton.rx.tap
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
+            .subscribe(onNext: {[weak self] in
+                guard let self = self else { return }
+                self.view.addSubview(self.pickerWithToolBar)
+                DispatchQueue.main.async {
+                    UIView.animate(withDuration: 0.3) {
+                        self.pickerWithToolBar.frame.origin.y = self.view.frame.height - self.pickerWithToolBar.frame.height
+                    }
+                }
+            }).disposed(by: disposeBag)
+        
+        toolBarDoneButton.rx.tap
+            .subscribe(onNext: {[weak self] in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    UIView.animate(
+                        withDuration: 0.3,
+                        animations: {
+                            self.pickerWithToolBar.frame.origin.y = self.view.frame.height + self.pickerWithToolBar.frame.height
+                    })
+                    { _ in
+                        self.pickerWithToolBar.removeFromSuperview()
+                    }
+                }
+            }).disposed(by: disposeBag)
     }
 }
 
 extension TasksViewController: StoryboardView {
     func bind(reactor: TasksViewReactor) {
-
+        
         Observable<Void>.just(())
             .map{ _ in Reactor.Action.load }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-
+        
         tasksTableView.rx.isReachedBottom
             .map { _ in Reactor.Action.paginate }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-
-
+        
+        
         let dataSource = RxTableViewSectionedAnimatedDataSource<CellItemSection>(
             animationConfiguration: AnimationConfiguration(insertAnimation: .fade,
                                                            reloadAnimation: .fade,
@@ -108,22 +160,28 @@ extension TasksViewController: StoryboardView {
                     return defaultCell
                 }
         })
-
+        
+        let pickerViewAdapter = RxPickerViewStringAdapter<[[String]]>(
+            components: [],
+            numberOfComponents: { _, _, components in return components.count },
+            numberOfRowsInComponent: { _, _, components, component in return components[component].count },
+            titleForRow: { _, _, components, row, component in return components[component][row] }
+        )
+        
         reactor.state.map { [$0.taskCellItemSection] }
             .bind(to: self.tasksTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-
+        
         refleshControl.rx.controlEvent(.valueChanged)
-            .map { _ in Reactor.Action.load }
+            .map { _ in Reactor.Action.reload }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-
+        
         reactor.state.map { $0.isLoading }
             .distinctUntilChanged()
             .filter { !$0 }
             .subscribe(onNext: {[weak self] _ in
                 self?.refleshControl.endRefreshing()
             }).disposed(by: disposeBag)
-
     }
 }
