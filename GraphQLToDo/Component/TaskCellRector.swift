@@ -60,6 +60,16 @@ final class TaskCellReactor: Reactor {
             return updateTask
         }
     }
+
+    func transform(mutation: Observable<Mutation>) -> Observable<Mutation> {
+        return .merge(
+            mutation,
+            taskService
+                .updateTaskStream
+                .filter { $0.id == self.identifier }
+                .map(Mutation.setTask)
+        )
+    }
     
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
