@@ -1,0 +1,17 @@
+#ReactorKit
+github "https://github.com/ReactorKit/ReactorKit"
+
+#Reactive
+github "ReactiveX/RxSwift" ~> 5.0
+github "RxSwiftCommunity/RxOptional"
+github "RxSwiftCommunity/RxDataSources" ~> 4.0
+
+#DI
+github "Swinject/Swinject"
+github "Swinject/SwinjectAutoregistration" 
+
+#Network
+github "apollographql/apollo-ios"
+
+#Image
+github "SDWebImage/SDWebImage"

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hq5-Jw-quq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tasks View Controller-->
+        <scene sceneID="s53-8P-kQJ">
+            <objects>
+                <viewController storyboardIdentifier="TasksViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hq5-Jw-quq" customClass="TasksViewController" customModule="GraphQLToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rNB-FW-ZgD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gpj-UK-q3L">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hu-D3-bkU" userLabel="CreateTask Button">
+                                <rect key="frame" x="324" y="772" width="65" height="65"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="ADQ-M9-dIQ"/>
+                                    <constraint firstAttribute="width" secondItem="8hu-D3-bkU" secondAttribute="height" multiplier="1:1" id="cJa-Hy-BH0"/>
+                                </constraints>
+                                <state key="normal" image="CreateTaskImage"/>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQx-DY-d6c" userLabel="Menu Button">
+                                <rect key="frame" x="336.5" y="717" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BQx-DY-d6c" secondAttribute="height" multiplier="1:1" id="iUz-CN-emj"/>
+                                    <constraint firstAttribute="width" constant="40" id="w90-0s-7M0"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gpj-UK-q3L" secondAttribute="bottom" id="3ca-45-4It"/>
+                            <constraint firstItem="8hu-D3-bkU" firstAttribute="top" secondItem="BQx-DY-d6c" secondAttribute="bottom" constant="15" id="B3t-CT-ckQ"/>
+                            <constraint firstItem="kah-aA-Plb" firstAttribute="bottom" secondItem="8hu-D3-bkU" secondAttribute="bottom" constant="25" id="QP5-uX-WTp"/>
+                            <constraint firstItem="BQx-DY-d6c" firstAttribute="centerX" secondItem="8hu-D3-bkU" secondAttribute="centerX" id="Ytt-ep-dTD"/>
+                            <constraint firstItem="kah-aA-Plb" firstAttribute="trailing" secondItem="gpj-UK-q3L" secondAttribute="trailing" id="gKN-Jf-WkS"/>
+                            <constraint firstAttribute="trailing" secondItem="8hu-D3-bkU" secondAttribute="trailing" constant="25" id="lLh-AO-j0u"/>
+                            <constraint firstItem="gpj-UK-q3L" firstAttribute="top" secondItem="kah-aA-Plb" secondAttribute="top" id="o4Y-ft-TL5"/>
+                            <constraint firstItem="gpj-UK-q3L" firstAttribute="leading" secondItem="kah-aA-Plb" secondAttribute="leading" id="uyb-ev-I4a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kah-aA-Plb"/>
+                    </view>
+                    <connections>
+                        <outlet property="createTaskButton" destination="8hu-D3-bkU" id="ovd-y6-taa"/>
+                        <outlet property="menuButton" destination="BQx-DY-d6c" id="Xgg-eZ-3iU"/>
+                        <outlet property="tasksTableView" destination="gpj-UK-q3L" id="i0q-K4-0cl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="om8-gV-Vvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CreateTaskImage" width="32" height="32"/>
+    </resources>
+</document>

@@ -1,0 +1,33 @@
+fragment TaskFields on Task{
+    id
+    title
+    notes
+    completed
+    due
+}
+
+query Tasks($input: TasksInput!, $orderBy: TaskOrderFields!, $page: PaginationInput!) {
+    tasks(input: $input, orderBy: $orderBy, page: $page) {
+        pageInfo {
+            ...PageInfoFields
+        }
+        edges {
+            cursor
+            node {
+                ...TaskFields
+            }
+        }
+    }
+}
+
+mutation CreateTask($input: CreateTaskInput!) {
+    createTask(input: $input) {
+        ...TaskFields
+    }
+}
+
+mutation UpdateTask($input: UpdateTaskInput!) {
+    updateTask(input: $input) {
+        ...TaskFields
+    }
+}
